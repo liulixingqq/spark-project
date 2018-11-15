@@ -1,0 +1,99 @@
+2018-11-12 14:38:59 INFO logInfo(Logging.scala:59) - Running Spark version 1.5.1
+2018-11-12 14:40:01 INFO logInfo(Logging.scala:59) - Changing view acls to: jzy,hadoop
+2018-11-12 14:40:01 INFO logInfo(Logging.scala:59) - Changing modify acls to: jzy,hadoop
+2018-11-12 14:40:01 INFO logInfo(Logging.scala:59) - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(jzy, hadoop); users with modify permissions: Set(jzy, hadoop)
+2018-11-12 14:40:02 INFO applyOrElse(Slf4jLogger.scala:80) - Slf4jLogger started
+2018-11-12 14:40:02 INFO apply$mcV$sp(Slf4jLogger.scala:74) - Starting remoting
+2018-11-12 14:40:02 INFO apply$mcV$sp(Slf4jLogger.scala:74) - Remoting started; listening on addresses :[akka.tcp://sparkDriver@192.168.92.1:53283]
+2018-11-12 14:40:02 INFO logInfo(Logging.scala:59) - Successfully started service 'sparkDriver' on port 53283.
+2018-11-12 14:40:02 INFO logInfo(Logging.scala:59) - Registering MapOutputTracker
+2018-11-12 14:40:03 INFO logInfo(Logging.scala:59) - Registering BlockManagerMaster
+2018-11-12 14:40:03 INFO logInfo(Logging.scala:59) - Created local directory at C:\Users\jzy\AppData\Local\Temp\blockmgr-acaba750-f79c-487c-8a0b-32aed847f2b4
+2018-11-12 14:40:03 INFO logInfo(Logging.scala:59) - MemoryStore started with capacity 809.8 MB
+2018-11-12 14:40:03 INFO logInfo(Logging.scala:59) - HTTP File server directory is C:\Users\jzy\AppData\Local\Temp\spark-40cc7124-66fd-4ee4-a3be-ed5a697c7b38\httpd-186b80d9-0bbe-44a8-87d5-c51cfc249701
+2018-11-12 14:40:03 INFO logInfo(Logging.scala:59) - Starting HTTP Server
+2018-11-12 14:40:03 INFO doStart(Server.java:272) - jetty-8.y.z-SNAPSHOT
+2018-11-12 14:40:03 INFO doStart(AbstractConnector.java:338) - Started SocketConnector@0.0.0.0:53284
+2018-11-12 14:40:03 INFO logInfo(Logging.scala:59) - Successfully started service 'HTTP file server' on port 53284.
+2018-11-12 14:40:03 INFO logInfo(Logging.scala:59) - Registering OutputCommitCoordinator
+2018-11-12 14:40:03 INFO doStart(Server.java:272) - jetty-8.y.z-SNAPSHOT
+2018-11-12 14:40:03 INFO doStart(AbstractConnector.java:338) - Started SelectChannelConnector@0.0.0.0:4040
+2018-11-12 14:40:03 INFO logInfo(Logging.scala:59) - Successfully started service 'SparkUI' on port 4040.
+2018-11-12 14:40:03 INFO logInfo(Logging.scala:59) - Started SparkUI at http://192.168.92.1:4040
+2018-11-12 14:40:03 WARN logWarning(Logging.scala:71) - Using default name DAGScheduler for source because spark.app.id is not set.
+2018-11-12 14:40:03 INFO logInfo(Logging.scala:59) - Starting executor ID driver on host localhost
+2018-11-12 14:40:04 INFO logInfo(Logging.scala:59) - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 53303.
+2018-11-12 14:40:04 INFO logInfo(Logging.scala:59) - Server created on 53303
+2018-11-12 14:40:04 INFO logInfo(Logging.scala:59) - Trying to register BlockManager
+2018-11-12 14:40:04 INFO logInfo(Logging.scala:59) - Registering block manager localhost:53303 with 809.8 MB RAM, BlockManagerId(driver, localhost, 53303)
+2018-11-12 14:40:04 INFO logInfo(Logging.scala:59) - Registered BlockManager
+2018-11-12 14:40:06 INFO logInfo(Logging.scala:59) - Starting job: take at MockData.java:120
+2018-11-12 14:40:06 INFO logInfo(Logging.scala:59) - Got job 0 (take at MockData.java:120) with 1 output partitions
+2018-11-12 14:40:06 INFO logInfo(Logging.scala:59) - Final stage: ResultStage 0(take at MockData.java:120)
+2018-11-12 14:40:06 INFO logInfo(Logging.scala:59) - Parents of final stage: List()
+2018-11-12 14:40:06 INFO logInfo(Logging.scala:59) - Missing parents: List()
+2018-11-12 14:40:06 INFO logInfo(Logging.scala:59) - Submitting ResultStage 0 (MapPartitionsRDD[2] at take at MockData.java:120), which has no missing parents
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - ensureFreeSpace(4336) called with curMem=0, maxMem=849110630
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - Block broadcast_0 stored as values in memory (estimated size 4.2 KB, free 809.8 MB)
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - ensureFreeSpace(2235) called with curMem=4336, maxMem=849110630
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - Block broadcast_0_piece0 stored as bytes in memory (estimated size 2.2 KB, free 809.8 MB)
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - Added broadcast_0_piece0 in memory on localhost:53303 (size: 2.2 KB, free: 809.8 MB)
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - Created broadcast 0 from broadcast at DAGScheduler.scala:861
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[2] at take at MockData.java:120)
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - Adding task set 0.0 with 1 tasks
+2018-11-12 14:40:07 WARN logWarning(Logging.scala:71) - Stage 0 contains a task of very large size (591 KB). The maximum recommended task size is 100 KB.
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - Starting task 0.0 in stage 0.0 (TID 0, localhost, PROCESS_LOCAL, 605794 bytes)
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - Running task 0.0 in stage 0.0 (TID 0)
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 0.0 (TID 0). 1164 bytes result sent to driver
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 0.0 (TID 0) in 189 ms on localhost (1/1)
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - Removed TaskSet 0.0, whose tasks have all completed, from pool 
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - ResultStage 0 (take at MockData.java:120) finished in 0.219 s
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - Job 0 finished: take at MockData.java:120, took 0.874373 s
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - Starting job: take at MockData.java:156
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - Got job 1 (take at MockData.java:156) with 1 output partitions
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - Final stage: ResultStage 1(take at MockData.java:156)
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - Parents of final stage: List()
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - Missing parents: List()
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - Submitting ResultStage 1 (MapPartitionsRDD[5] at take at MockData.java:156), which has no missing parents
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - ensureFreeSpace(4168) called with curMem=6571, maxMem=849110630
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - Block broadcast_1 stored as values in memory (estimated size 4.1 KB, free 809.8 MB)
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - ensureFreeSpace(2160) called with curMem=10739, maxMem=849110630
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.1 KB, free 809.8 MB)
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - Added broadcast_1_piece0 in memory on localhost:53303 (size: 2.1 KB, free: 809.8 MB)
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - Created broadcast 1 from broadcast at DAGScheduler.scala:861
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - Submitting 1 missing tasks from ResultStage 1 (MapPartitionsRDD[5] at take at MockData.java:156)
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - Adding task set 1.0 with 1 tasks
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - Starting task 0.0 in stage 1.0 (TID 1, localhost, PROCESS_LOCAL, 7406 bytes)
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - Running task 0.0 in stage 1.0 (TID 1)
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 1.0 (TID 1). 1125 bytes result sent to driver
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 1.0 (TID 1) in 20 ms on localhost (1/1)
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - ResultStage 1 (take at MockData.java:156) finished in 0.020 s
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - Removed TaskSet 1.0, whose tasks have all completed, from pool 
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - Job 1 finished: take at MockData.java:156, took 0.034465 s
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - Starting job: take at MockData.java:186
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - Got job 2 (take at MockData.java:186) with 1 output partitions
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - Final stage: ResultStage 2(take at MockData.java:186)
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - Parents of final stage: List()
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - Missing parents: List()
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - Submitting ResultStage 2 (MapPartitionsRDD[8] at take at MockData.java:186), which has no missing parents
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - ensureFreeSpace(3904) called with curMem=12899, maxMem=849110630
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - Block broadcast_2 stored as values in memory (estimated size 3.8 KB, free 809.8 MB)
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - ensureFreeSpace(2074) called with curMem=16803, maxMem=849110630
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - Block broadcast_2_piece0 stored as bytes in memory (estimated size 2.0 KB, free 809.8 MB)
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - Added broadcast_2_piece0 in memory on localhost:53303 (size: 2.0 KB, free: 809.8 MB)
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - Created broadcast 2 from broadcast at DAGScheduler.scala:861
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - Submitting 1 missing tasks from ResultStage 2 (MapPartitionsRDD[8] at take at MockData.java:186)
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - Adding task set 2.0 with 1 tasks
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - Starting task 0.0 in stage 2.0 (TID 2, localhost, PROCESS_LOCAL, 6420 bytes)
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - Running task 0.0 in stage 2.0 (TID 2)
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 2.0 (TID 2). 1092 bytes result sent to driver
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - ResultStage 2 (take at MockData.java:186) finished in 0.014 s
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 2.0 (TID 2) in 14 ms on localhost (1/1)
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - Job 2 finished: take at MockData.java:186, took 0.023978 s
+2018-11-12 14:40:07 INFO logInfo(Logging.scala:59) - Removed TaskSet 2.0, whose tasks have all completed, from pool 
+2018-11-12 14:40:08 INFO logInfo(Logging.scala:59) - Removed broadcast_2_piece0 on localhost:53303 in memory (size: 2.0 KB, free: 809.8 MB)
+2018-11-12 14:40:08 INFO logInfo(Logging.scala:59) - Cleaned accumulator 3
+2018-11-12 14:40:08 INFO logInfo(Logging.scala:59) - Removed broadcast_1_piece0 on localhost:53303 in memory (size: 2.1 KB, free: 809.8 MB)
+2018-11-12 14:40:08 INFO logInfo(Logging.scala:59) - Cleaned accumulator 2
+2018-11-12 14:40:08 INFO logInfo(Logging.scala:59) - Removed broadcast_0_piece0 on localhost:53303 in memory (size: 2.2 KB, free: 809.8 MB)
+2018-11-12 14:40:08 INFO logInfo(Logging.scala:59) - Cleaned accumulator 1

@@ -62,6 +62,7 @@ public class GroupConcatDistinctUDAF extends UserDefinedAggregateFunction {
 	}
 	
 	/**
+	 *   // 每一个分区中的每一条数据  聚合的时候需要调用该方法
 	 * 更新
 	 * 可以认为是，一个一个地将组内的字段值传递进来
 	 * 实现拼接的逻辑
@@ -89,7 +90,7 @@ public class GroupConcatDistinctUDAF extends UserDefinedAggregateFunction {
 	}
 	
 	/**
-	 * 合并
+	 * 合并  多个节点上面的操作
 	 * update操作，可能是针对一个分组内的部分数据，在某个节点上发生的
 	 * 但是可能一个分组内的数据，会分布在多个节点上处理
 	 * 此时就要用merge操作，将各个节点上分布式拼接好的串，合并起来

@@ -63,8 +63,8 @@ public class AreaTop3ProductSpark {
 		sqlContext.udf().register("group_concat_distinct", 
 				new GroupConcatDistinctUDAF());
 		
-		// 准备模拟数据
-		SparkUtils.mockData(sc, sqlContext);  
+			// 准备模拟数据
+			SparkUtils.mockData(sc, sqlContext);
 		
 		// 获取命令行传入的taskid，查询对应的任务参数
 		ITaskDAO taskDAO = DAOFactory.getTaskDAO();
@@ -97,19 +97,19 @@ public class AreaTop3ProductSpark {
 		generateTempAreaPrdocutClickCountTable(sqlContext);
 		
 		// 生成包含完整商品信息的各区域各商品点击次数的临时表
-		generateTempAreaFullProductClickCountTable(sqlContext);  
-		
+		generateTempAreaFullProductClickCountTable(sqlContext);
+
 		// 使用开窗函数获取各个区域内点击次数排名前3的热门商品
 		JavaRDD<Row> areaTop3ProductRDD = getAreaTop3ProductRDD(sqlContext);
-		System.out.println("areaTop3ProductRDD: " + areaTop3ProductRDD.count());  
-		
+		System.out.println("areaTop3ProductRDD: " + areaTop3ProductRDD.count());
+//
 		// 这边的写入mysql和之前不太一样
 		// 因为实际上，就这个业务需求而言，计算出来的最终数据量是比较小的
 		// 总共就不到10个区域，每个区域还是top3热门商品，总共最后数据量也就是几十个
 		// 所以可以直接将数据collect()到本地
 		// 用批量插入的方式，一次性插入mysql即可
 		List<Row> rows = areaTop3ProductRDD.collect();
-		System.out.println("rows: " + rows.size());  
+		System.out.println("rows: " + rows.size());
 		persistAreaTop3Product(taskid, rows);
 		
 		sc.close();
@@ -324,15 +324,24 @@ public class AreaTop3ProductSpark {
 		
 		// 使用Spark SQL执行这条SQL语句
 		DataFrame df = sqlContext.sql(sql);
+		//df.show();
 		
 		System.out.println("tmp_area_product_click_count: " + df.count());  
 		
 		// 再次将查询出来的数据注册为一个临时表
 		// 各区域各商品的点击次数（以及额外的城市列表）
-		df.registerTempTable("tmp_area_product_click_count");    
+		df.registerTempTable("tmp_area_product_click_count");
+
 	}
 	
 	/**
+	 *
+	 *    +----+----------+-----------+----------+------------+--------------+
+	 |area|product_id|click_count|city_infos|product_name|product_status|
+	 +----+----------+-----------+----------+------------+--------------+
+	 |  华东|        31|          5| 1:上海,2:南京|   product31|   Third Party|
+	 |  华中|        31|          8| 6:长沙,5:武汉|   product31|   Third Party|
+	 |  西南|        31|          2|      8:成都|   product31|   Third Party|
 	 * 生成区域商品点击次数临时表（包含了商品的完整信息）
 	 * @param sqlContext
 	 */
@@ -343,7 +352,6 @@ public class AreaTop3ProductSpark {
 		// get_json_object()函数，可以从json串中获取指定的字段的值
 		// if()函数，判断，如果product_status是0，那么就是自营商品；如果是1，那么就是第三方商品
 		// area, product_id, click_count, city_infos, product_name, product_status
-		
 		// 为什么要费时费力，计算出来商品经营类型
 		// 你拿到到了某个区域top3热门的商品，那么其实这个商品是自营的，还是第三方的
 		// 其实是很重要的一件事
@@ -410,6 +418,7 @@ public class AreaTop3ProductSpark {
 //				+ "JOIN tmp_product_info pi ON tapcc.product_id=pi.product_id ";
 		
 		DataFrame df = sqlContext.sql(sql);
+		df.show();
 		
 		System.out.println("tmp_area_fullprod_click_count: " + df.count());  
 		
@@ -461,7 +470,7 @@ public class AreaTop3ProductSpark {
 						+ "city_infos,"
 						+ "product_name,"
 						+ "product_status,"
-						+ "row_number() OVER (PARTITION BY area ORDER BY click_count DESC) rank "
+						+ "row_number() OVER (PARTITION BY area ORDER BY click_count DESC) rank "   //  分组取topn  根据area分组
 					+ "FROM tmp_area_fullprod_click_count "
 				+ ") t "
 				+ "WHERE rank<=3";

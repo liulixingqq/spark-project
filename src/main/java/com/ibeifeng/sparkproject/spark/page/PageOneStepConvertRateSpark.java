@@ -87,6 +87,8 @@ public class PageOneStepConvertRateSpark {
 		JavaPairRDD<String, Iterable<Row>> sessionid2actionsRDD = sessionid2actionRDD.groupByKey();
 		
 		// 最核心的一步，每个session的单跳页面切片的生成，以及页面流的匹配，算法
+
+		// pageSplit   1L
 		JavaPairRDD<String, Integer> pageSplitRDD = generateAndMatchPageSplit(
 				sc, sessionid2actionsRDD, taskParam);
 		Map<String, Object> pageSplitPvMap = pageSplitRDD.countByKey();

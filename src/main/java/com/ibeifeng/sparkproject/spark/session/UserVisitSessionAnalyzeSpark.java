@@ -243,13 +243,13 @@ public class UserVisitSessionAnalyzeSpark {
 		
 
 		
-//		// 获取top10热门品类
-//		List<Tuple2<CategorySortKey, String>> top10CategoryList =
-//				getTop10Category(task.getTaskid(), sessionid2detailRDD);
-//
-//		// 获取top10活跃session
-//		getTop10Session(sc, task.getTaskid(),
-//				top10CategoryList, sessionid2detailRDD);
+		// 获取top10热门品类
+		List<Tuple2<CategorySortKey, String>> top10CategoryList =
+				getTop10Category(task.getTaskid(), sessionid2detailRDD);
+
+		// 获取top10活跃session
+		getTop10Session(sc, task.getTaskid(),
+				top10CategoryList, sessionid2detailRDD);
 		
 		// 关闭Spark上下文
 		sc.close(); 
@@ -452,22 +452,6 @@ public class UserVisitSessionAnalyzeSpark {
 						
 						// 计算session访问时长（秒）
 						long visitLength = (endTime.getTime() - startTime.getTime()) / 1000; 
-						
-						// 大家思考一下
-						// 我们返回的数据格式，即使<sessionid,partAggrInfo>
-						// 但是，这一步聚合完了以后，其实，我们是还需要将每一行数据，跟对应的用户信息进行聚合
-						// 问题就来了，如果是跟用户信息进行聚合的话，那么key，就不应该是sessionid
-						// 就应该是userid，才能够跟<userid,Row>格式的用户信息进行聚合
-						// 如果我们这里直接返回<sessionid,partAggrInfo>，还得再做一次mapToPair算子
-						// 将RDD映射成<userid,partAggrInfo>的格式，那么就多此一举
-						
-						// 所以，我们这里其实可以直接，返回的数据格式，就是<userid,partAggrInfo>
-						// 然后跟用户信息join的时候，将partAggrInfo关联上userInfo
-						// 然后再直接将返回的Tuple的key设置成sessionid
-						// 最后的数据格式，还是<sessionid,fullAggrInfo>
-						
-						// 聚合数据，用什么样的格式进行拼接？
-						// 我们这里统一定义，使用key=value|key=value
 						String partAggrInfo = Constants.FIELD_SESSION_ID + "=" + sessionid + "|"
 								+ Constants.FIELD_SEARCH_KEYWORDS + "=" + searchKeywords + "|"
 								+ Constants.FIELD_CLICK_CATEGORY_IDS + "=" + clickCategoryIds + "|"
@@ -1012,6 +996,8 @@ public class UserVisitSessionAnalyzeSpark {
 	private static JavaPairRDD<String, Row> getSessionid2detailRDD(
 			JavaPairRDD<String, String> sessionid2aggrInfoRDD,
 			JavaPairRDD<String, Row> sessionid2actionRDD) {
+
+		//  sessionid2aggrInfoRDD.join(sessionid2actionRDD)   sessionId,(aggrInfo,action)
 		JavaPairRDD<String, Row> sessionid2detailRDD = sessionid2aggrInfoRDD
 				.join(sessionid2actionRDD)
 				.mapToPair(new PairFunction<Tuple2<String,Tuple2<String,Row>>, String, Row>() {
@@ -1468,9 +1454,8 @@ public class UserVisitSessionAnalyzeSpark {
 	}
 	
 	/**
-	 * 获取top10热门品类
-	 * @param filteredSessionid2AggrInfoRDD
-	 * @param sessionid2actionRDD
+	 * 获取top10热门品类  并把数据插入数据库
+	 *
 	 */
 	private static List<Tuple2<CategorySortKey, String>> getTop10Category(  
 			long taskid,  
@@ -1480,7 +1465,7 @@ public class UserVisitSessionAnalyzeSpark {
 		 */
 		
 		// 获取session访问过的所有品类id
-		// 访问过：指的是，点击过、下单过、支付过的品类
+		// 访问过：指的是，点击过、下单过、支付过的品类   举例子 <categoryId,categoryId>
 		JavaPairRDD<Long, Long> categoryidRDD = sessionid2detailRDD.flatMapToPair(
 				
 				new PairFlatMapFunction<Tuple2<String,Row>, Long, Long>() {
@@ -1537,7 +1522,7 @@ public class UserVisitSessionAnalyzeSpark {
 		// 分别来计算各品类点击、下单和支付的次数，可以先对访问明细数据进行过滤
 		// 分别过滤出点击、下单和支付行为，然后通过map、reduceByKey等算子来进行计算
 		
-		// 计算各个品类的点击次数
+		// 计算各个品类的点击次数  categoryId,count
 		JavaPairRDD<Long, Long> clickCategoryId2CountRDD = 
 				getClickCategoryId2CountRDD(sessionid2detailRDD);
 		// 计算各个品类的下单次数
@@ -1558,7 +1543,7 @@ public class UserVisitSessionAnalyzeSpark {
 		 * 所以，这里，就不能使用join操作，要使用leftOuterJoin操作，就是说，如果categoryidRDD不能
 		 * join到自己的某个数据，比如点击、或下单、或支付次数，那么该categoryidRDD还是要保留下来的
 		 * 只不过，没有join到的那个数据，就是0了
-		 * 
+		 *    categoryId, value=点击+点击count+下单+下单count+支付+支付count
 		 */
 		JavaPairRDD<Long, String> categoryid2countRDD = joinCategoryAndData(
 				categoryidRDD, clickCategoryId2CountRDD, orderCategoryId2CountRDD, 
@@ -1944,6 +1929,9 @@ public class UserVisitSessionAnalyzeSpark {
 			JavaPairRDD<Long, Long> payCategoryId2CountRDD) {
 		// 解释一下，如果用leftOuterJoin，就可能出现，右边那个RDD中，join过来时，没有值
 		// 所以Tuple中的第二个值用Optional<Long>类型，就代表，可能有值，可能没有值
+
+		// categoryIdRdd <categoryId,categoryId>   clickCategoryId2CountRDD<categoryId,count>
+		//  tmpJoinRDD <categoryId,<categoryId,count>>
 		JavaPairRDD<Long, Tuple2<Long, Optional<Long>>> tmpJoinRDD = 
 				categoryidRDD.leftOuterJoin(clickCategoryId2CountRDD);
 		
@@ -1972,7 +1960,9 @@ public class UserVisitSessionAnalyzeSpark {
 					}
 					
 				});
-		
+
+				//  tmpMapRDD <categoryId,value>  orderCategoryId2CountRDD <categoryId,count>
+				// tmpMapRDD.leftOuterJoin(orderCategoryId2CountRDD)  <categoryId,<value,count>>
 		tmpMapRDD = tmpMapRDD.leftOuterJoin(orderCategoryId2CountRDD).mapToPair(
 				
 				new PairFunction<Tuple2<Long,Tuple2<String,Optional<Long>>>, Long, String>() {
@@ -2060,7 +2050,8 @@ public class UserVisitSessionAnalyzeSpark {
 		 */
 		JavaPairRDD<String, Iterable<Row>> sessionid2detailsRDD =
 				sessionid2detailRDD.groupByKey();
-		
+
+		// categoryId  sessionId,count
 		JavaPairRDD<Long, String> categoryid2sessionCountRDD = sessionid2detailsRDD.flatMapToPair(
 				
 				new PairFlatMapFunction<Tuple2<String,Iterable<Row>>, Long, String>() {
@@ -2108,7 +2099,10 @@ public class UserVisitSessionAnalyzeSpark {
 					
 				}) ;
 		
-		// 获取到to10热门品类，被各个session点击的次数
+		// 获取到to10热门品类，被各个session点击的次数    <categoryId,categoryId>  <categoryId,sessionId,count>
+		//  top10CategoryIdRDD.join(categoryid2sessionCountRDD)  <categoryId, <categoryId, sessionId:count>>
+		//  返回  <categoryId, sessionId,count>
+
 		JavaPairRDD<Long, String> top10CategorySessionCountRDD = top10CategoryIdRDD
 				.join(categoryid2sessionCountRDD)
 				.mapToPair(new PairFunction<Tuple2<Long,Tuple2<Long,String>>, Long, String>() {
@@ -2126,6 +2120,7 @@ public class UserVisitSessionAnalyzeSpark {
 		
 		/**
 		 * 第三步：分组取TopN算法实现，获取每个品类的top10活跃用户
+		 *     categoryId  <sessionId:count sessionId:count .....>
 		 */
 		JavaPairRDD<Long, Iterable<String>> top10CategorySessionCountsRDD =
 				top10CategorySessionCountRDD.groupByKey();
@@ -2205,6 +2200,8 @@ public class UserVisitSessionAnalyzeSpark {
 		
 		/**
 		 * 第四步：获取top10活跃session的明细数据，并写入MySQL
+		 *
+		 *    TODO  应该插入 top 10 sessionDetail 表
 		 */
 		JavaPairRDD<String, Tuple2<String, Row>> sessionDetailRDD =
 				top10SessionRDD.join(sessionid2detailRDD);  

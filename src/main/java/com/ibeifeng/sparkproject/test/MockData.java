@@ -57,8 +57,12 @@ public class MockData {
 				Long clickCategoryId = null;
 				  
 				for(int k = 0; k < random.nextInt(100); k++) {
-					long pageid = random.nextInt(10);    
-					String actionTime = baseActionTime + ":" + StringUtils.fulfuill(String.valueOf(random.nextInt(59))) + ":" + StringUtils.fulfuill(String.valueOf(random.nextInt(59)));
+					long pageid = random.nextInt(10);
+
+					// 多少天 多少小时 多少分 多少秒
+					String actionTime = baseActionTime + ":" +
+							StringUtils.fulfuill(String.valueOf(random.nextInt(59))) + ":" +
+							StringUtils.fulfuill(String.valueOf(random.nextInt(59)));
 					String searchKeyword = null;
 					Long clickProductId = null;
 					String orderCategoryIds = null;
@@ -165,6 +169,8 @@ public class MockData {
 		for(int i = 0; i < 100; i ++) {
 			long productId = i;
 			String productName = "product" + i;
+
+			// json 形式
 			String extendInfo = "{\"product_status\": " + productStatus[random.nextInt(2)] + "}";    
 			
 			Row row = RowFactory.create(productId, productName, extendInfo);

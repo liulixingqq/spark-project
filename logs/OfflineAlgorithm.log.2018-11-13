@@ -1,0 +1,894 @@
+2018-11-13 14:30:37 INFO logInfo(Logging.scala:59) - Running Spark version 1.5.1
+2018-11-13 14:31:01 INFO logInfo(Logging.scala:59) - Changing view acls to: jzy,hadoop
+2018-11-13 14:31:01 INFO logInfo(Logging.scala:59) - Changing modify acls to: jzy,hadoop
+2018-11-13 14:31:01 INFO logInfo(Logging.scala:59) - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(jzy, hadoop); users with modify permissions: Set(jzy, hadoop)
+2018-11-13 14:31:02 INFO applyOrElse(Slf4jLogger.scala:80) - Slf4jLogger started
+2018-11-13 14:31:02 INFO apply$mcV$sp(Slf4jLogger.scala:74) - Starting remoting
+2018-11-13 14:31:02 INFO apply$mcV$sp(Slf4jLogger.scala:74) - Remoting started; listening on addresses :[akka.tcp://sparkDriver@192.168.92.1:51790]
+2018-11-13 14:31:02 INFO logInfo(Logging.scala:59) - Successfully started service 'sparkDriver' on port 51790.
+2018-11-13 14:31:02 INFO logInfo(Logging.scala:59) - Registering MapOutputTracker
+2018-11-13 14:31:02 INFO logInfo(Logging.scala:59) - Registering BlockManagerMaster
+2018-11-13 14:31:02 INFO logInfo(Logging.scala:59) - Created local directory at C:\Users\jzy\AppData\Local\Temp\blockmgr-f8375f5d-9a2f-448c-ad4f-751b398e9959
+2018-11-13 14:31:02 INFO logInfo(Logging.scala:59) - MemoryStore started with capacity 809.8 MB
+2018-11-13 14:31:02 INFO logInfo(Logging.scala:59) - HTTP File server directory is C:\Users\jzy\AppData\Local\Temp\spark-b4eab2f5-ac9d-4096-9f93-fe81f89bccb2\httpd-5c15ece1-1b3a-4fa7-95e0-1b3825245098
+2018-11-13 14:31:02 INFO logInfo(Logging.scala:59) - Starting HTTP Server
+2018-11-13 14:31:02 INFO doStart(Server.java:272) - jetty-8.y.z-SNAPSHOT
+2018-11-13 14:31:02 INFO doStart(AbstractConnector.java:338) - Started SocketConnector@0.0.0.0:51791
+2018-11-13 14:31:02 INFO logInfo(Logging.scala:59) - Successfully started service 'HTTP file server' on port 51791.
+2018-11-13 14:31:02 INFO logInfo(Logging.scala:59) - Registering OutputCommitCoordinator
+2018-11-13 14:31:02 INFO doStart(Server.java:272) - jetty-8.y.z-SNAPSHOT
+2018-11-13 14:31:02 INFO doStart(AbstractConnector.java:338) - Started SelectChannelConnector@0.0.0.0:4040
+2018-11-13 14:31:02 INFO logInfo(Logging.scala:59) - Successfully started service 'SparkUI' on port 4040.
+2018-11-13 14:31:02 INFO logInfo(Logging.scala:59) - Started SparkUI at http://192.168.92.1:4040
+2018-11-13 14:31:02 WARN logWarning(Logging.scala:71) - Using default name DAGScheduler for source because spark.app.id is not set.
+2018-11-13 14:31:02 INFO logInfo(Logging.scala:59) - Starting executor ID driver on host localhost
+2018-11-13 14:31:02 INFO logInfo(Logging.scala:59) - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 51810.
+2018-11-13 14:31:02 INFO logInfo(Logging.scala:59) - Server created on 51810
+2018-11-13 14:31:02 INFO logInfo(Logging.scala:59) - Trying to register BlockManager
+2018-11-13 14:31:02 INFO logInfo(Logging.scala:59) - Registering block manager localhost:51810 with 809.8 MB RAM, BlockManagerId(driver, localhost, 51810)
+2018-11-13 14:31:02 INFO logInfo(Logging.scala:59) - Registered BlockManager
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Starting job: take at MockData.java:120
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Got job 0 (take at MockData.java:120) with 1 output partitions
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Final stage: ResultStage 0(take at MockData.java:120)
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Parents of final stage: List()
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Missing parents: List()
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Submitting ResultStage 0 (MapPartitionsRDD[2] at take at MockData.java:120), which has no missing parents
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - ensureFreeSpace(4336) called with curMem=0, maxMem=849110630
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Block broadcast_0 stored as values in memory (estimated size 4.2 KB, free 809.8 MB)
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - ensureFreeSpace(2235) called with curMem=4336, maxMem=849110630
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Block broadcast_0_piece0 stored as bytes in memory (estimated size 2.2 KB, free 809.8 MB)
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Added broadcast_0_piece0 in memory on localhost:51810 (size: 2.2 KB, free: 809.8 MB)
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Created broadcast 0 from broadcast at DAGScheduler.scala:861
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[2] at take at MockData.java:120)
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Adding task set 0.0 with 1 tasks
+2018-11-13 14:31:04 WARN logWarning(Logging.scala:71) - Stage 0 contains a task of very large size (606 KB). The maximum recommended task size is 100 KB.
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Starting task 0.0 in stage 0.0 (TID 0, localhost, PROCESS_LOCAL, 621064 bytes)
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Running task 0.0 in stage 0.0 (TID 0)
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 0.0 (TID 0). 1163 bytes result sent to driver
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 0.0 (TID 0) in 164 ms on localhost (1/1)
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - ResultStage 0 (take at MockData.java:120) finished in 0.177 s
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Job 0 finished: take at MockData.java:120, took 0.481209 s
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Removed TaskSet 0.0, whose tasks have all completed, from pool 
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Starting job: take at MockData.java:156
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Got job 1 (take at MockData.java:156) with 1 output partitions
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Final stage: ResultStage 1(take at MockData.java:156)
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Parents of final stage: List()
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Missing parents: List()
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Submitting ResultStage 1 (MapPartitionsRDD[5] at take at MockData.java:156), which has no missing parents
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - ensureFreeSpace(4168) called with curMem=6571, maxMem=849110630
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Block broadcast_1 stored as values in memory (estimated size 4.1 KB, free 809.8 MB)
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - ensureFreeSpace(2160) called with curMem=10739, maxMem=849110630
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.1 KB, free 809.8 MB)
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Added broadcast_1_piece0 in memory on localhost:51810 (size: 2.1 KB, free: 809.8 MB)
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Created broadcast 1 from broadcast at DAGScheduler.scala:861
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Submitting 1 missing tasks from ResultStage 1 (MapPartitionsRDD[5] at take at MockData.java:156)
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Adding task set 1.0 with 1 tasks
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Starting task 0.0 in stage 1.0 (TID 1, localhost, PROCESS_LOCAL, 7406 bytes)
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Running task 0.0 in stage 1.0 (TID 1)
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 1.0 (TID 1). 1126 bytes result sent to driver
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 1.0 (TID 1) in 29 ms on localhost (1/1)
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - ResultStage 1 (take at MockData.java:156) finished in 0.029 s
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Removed TaskSet 1.0, whose tasks have all completed, from pool 
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Job 1 finished: take at MockData.java:156, took 0.049515 s
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Starting job: take at MockData.java:186
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Got job 2 (take at MockData.java:186) with 1 output partitions
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Final stage: ResultStage 2(take at MockData.java:186)
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Parents of final stage: List()
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Missing parents: List()
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Submitting ResultStage 2 (MapPartitionsRDD[8] at take at MockData.java:186), which has no missing parents
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - ensureFreeSpace(3904) called with curMem=12899, maxMem=849110630
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Block broadcast_2 stored as values in memory (estimated size 3.8 KB, free 809.8 MB)
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - ensureFreeSpace(2074) called with curMem=16803, maxMem=849110630
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Block broadcast_2_piece0 stored as bytes in memory (estimated size 2.0 KB, free 809.8 MB)
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Added broadcast_2_piece0 in memory on localhost:51810 (size: 2.0 KB, free: 809.8 MB)
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Created broadcast 2 from broadcast at DAGScheduler.scala:861
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Submitting 1 missing tasks from ResultStage 2 (MapPartitionsRDD[8] at take at MockData.java:186)
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Adding task set 2.0 with 1 tasks
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Starting task 0.0 in stage 2.0 (TID 2, localhost, PROCESS_LOCAL, 6420 bytes)
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Running task 0.0 in stage 2.0 (TID 2)
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 2.0 (TID 2). 1092 bytes result sent to driver
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 2.0 (TID 2) in 18 ms on localhost (1/1)
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - ResultStage 2 (take at MockData.java:186) finished in 0.018 s
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Removed TaskSet 2.0, whose tasks have all completed, from pool 
+2018-11-13 14:31:04 INFO logInfo(Logging.scala:59) - Job 2 finished: take at MockData.java:186, took 0.028108 s
+2018-11-13 14:31:05 INFO logInfo(Logging.scala:59) - Removed broadcast_2_piece0 on localhost:51810 in memory (size: 2.0 KB, free: 809.8 MB)
+2018-11-13 14:31:05 INFO logInfo(Logging.scala:59) - Cleaned accumulator 3
+2018-11-13 14:31:05 INFO logInfo(Logging.scala:59) - Removed broadcast_1_piece0 on localhost:51810 in memory (size: 2.1 KB, free: 809.8 MB)
+2018-11-13 14:31:05 INFO logInfo(Logging.scala:59) - Cleaned accumulator 2
+2018-11-13 14:31:05 INFO logInfo(Logging.scala:59) - Removed broadcast_0_piece0 on localhost:51810 in memory (size: 2.2 KB, free: 809.8 MB)
+2018-11-13 14:31:05 INFO logInfo(Logging.scala:59) - Cleaned accumulator 1
+2018-11-13 14:31:05 INFO logInfo(Logging.scala:59) - Starting job: count at UserVisitSessionAnalyzeSpark.java:185
+2018-11-13 14:31:05 INFO logInfo(Logging.scala:59) - Got job 3 (count at UserVisitSessionAnalyzeSpark.java:185) with 1 output partitions
+2018-11-13 14:31:05 INFO logInfo(Logging.scala:59) - Final stage: ResultStage 3(count at UserVisitSessionAnalyzeSpark.java:185)
+2018-11-13 14:31:05 INFO logInfo(Logging.scala:59) - Parents of final stage: List()
+2018-11-13 14:31:05 INFO logInfo(Logging.scala:59) - Missing parents: List()
+2018-11-13 14:31:05 INFO logInfo(Logging.scala:59) - Submitting ResultStage 3 (MapPartitionsRDD[11] at mapPartitionsToPair at UserVisitSessionAnalyzeSpark.java:337), which has no missing parents
+2018-11-13 14:31:05 INFO logInfo(Logging.scala:59) - ensureFreeSpace(8216) called with curMem=0, maxMem=849110630
+2018-11-13 14:31:05 INFO logInfo(Logging.scala:59) - Block broadcast_3 stored as values in memory (estimated size 8.0 KB, free 809.8 MB)
+2018-11-13 14:31:05 INFO logInfo(Logging.scala:59) - ensureFreeSpace(4092) called with curMem=8216, maxMem=849110630
+2018-11-13 14:31:05 INFO logInfo(Logging.scala:59) - Block broadcast_3_piece0 stored as bytes in memory (estimated size 4.0 KB, free 809.8 MB)
+2018-11-13 14:31:05 INFO logInfo(Logging.scala:59) - Added broadcast_3_piece0 in memory on localhost:51810 (size: 4.0 KB, free: 809.8 MB)
+2018-11-13 14:31:05 INFO logInfo(Logging.scala:59) - Created broadcast 3 from broadcast at DAGScheduler.scala:861
+2018-11-13 14:31:05 INFO logInfo(Logging.scala:59) - Submitting 1 missing tasks from ResultStage 3 (MapPartitionsRDD[11] at mapPartitionsToPair at UserVisitSessionAnalyzeSpark.java:337)
+2018-11-13 14:31:05 INFO logInfo(Logging.scala:59) - Adding task set 3.0 with 1 tasks
+2018-11-13 14:31:05 WARN logWarning(Logging.scala:71) - Stage 3 contains a task of very large size (606 KB). The maximum recommended task size is 100 KB.
+2018-11-13 14:31:05 INFO logInfo(Logging.scala:59) - Starting task 0.0 in stage 3.0 (TID 3, localhost, PROCESS_LOCAL, 621064 bytes)
+2018-11-13 14:31:05 INFO logInfo(Logging.scala:59) - Running task 0.0 in stage 3.0 (TID 3)
+2018-11-13 14:31:05 INFO logInfo(Logging.scala:59) - Partition rdd_11_0 not found, computing it
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Code generated in 138.22195 ms
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - ensureFreeSpace(16) called with curMem=12308, maxMem=849110630
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Block rdd_11_0 stored as values in memory (estimated size 16.0 B, free 809.8 MB)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Added rdd_11_0 in memory on localhost:51810 (size: 16.0 B, free: 809.8 MB)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 3.0 (TID 3). 1701 bytes result sent to driver
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - ResultStage 3 (count at UserVisitSessionAnalyzeSpark.java:185) finished in 0.268 s
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Job 3 finished: count at UserVisitSessionAnalyzeSpark.java:185, took 0.287370 s
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 3.0 (TID 3) in 266 ms on localhost (1/1)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Removed TaskSet 3.0, whose tasks have all completed, from pool 
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Starting job: count at UserVisitSessionAnalyzeSpark.java:203
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Registering RDD 11 (mapPartitionsToPair at UserVisitSessionAnalyzeSpark.java:337)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Registering RDD 14 (mapToPair at UserVisitSessionAnalyzeSpark.java:374)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Registering RDD 16 (mapToPair at UserVisitSessionAnalyzeSpark.java:471)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Got job 4 (count at UserVisitSessionAnalyzeSpark.java:203) with 1 output partitions
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Final stage: ResultStage 7(count at UserVisitSessionAnalyzeSpark.java:203)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Parents of final stage: List(ShuffleMapStage 5, ShuffleMapStage 6)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Missing parents: List(ShuffleMapStage 5, ShuffleMapStage 6)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Submitting ShuffleMapStage 4 (MapPartitionsRDD[11] at mapPartitionsToPair at UserVisitSessionAnalyzeSpark.java:337), which has no missing parents
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - ensureFreeSpace(9576) called with curMem=12324, maxMem=849110630
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Block broadcast_4 stored as values in memory (estimated size 9.4 KB, free 809.8 MB)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - ensureFreeSpace(4612) called with curMem=21900, maxMem=849110630
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Block broadcast_4_piece0 stored as bytes in memory (estimated size 4.5 KB, free 809.7 MB)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Added broadcast_4_piece0 in memory on localhost:51810 (size: 4.5 KB, free: 809.8 MB)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Created broadcast 4 from broadcast at DAGScheduler.scala:861
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Submitting 1 missing tasks from ShuffleMapStage 4 (MapPartitionsRDD[11] at mapPartitionsToPair at UserVisitSessionAnalyzeSpark.java:337)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Adding task set 4.0 with 1 tasks
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Submitting ShuffleMapStage 6 (MapPartitionsRDD[16] at mapToPair at UserVisitSessionAnalyzeSpark.java:471), which has no missing parents
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - ensureFreeSpace(5216) called with curMem=26512, maxMem=849110630
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Block broadcast_5 stored as values in memory (estimated size 5.1 KB, free 809.7 MB)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - ensureFreeSpace(2721) called with curMem=31728, maxMem=849110630
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Block broadcast_5_piece0 stored as bytes in memory (estimated size 2.7 KB, free 809.7 MB)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Added broadcast_5_piece0 in memory on localhost:51810 (size: 2.7 KB, free: 809.8 MB)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Created broadcast 5 from broadcast at DAGScheduler.scala:861
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Submitting 1 missing tasks from ShuffleMapStage 6 (MapPartitionsRDD[16] at mapToPair at UserVisitSessionAnalyzeSpark.java:471)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Adding task set 6.0 with 1 tasks
+2018-11-13 14:31:06 WARN logWarning(Logging.scala:71) - Stage 4 contains a task of very large size (606 KB). The maximum recommended task size is 100 KB.
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Starting task 0.0 in stage 4.0 (TID 4, localhost, PROCESS_LOCAL, 621053 bytes)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Running task 0.0 in stage 4.0 (TID 4)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Found block rdd_11_0 locally
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 4.0 (TID 4). 2396 bytes result sent to driver
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Starting task 0.0 in stage 6.0 (TID 5, localhost, PROCESS_LOCAL, 7395 bytes)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Running task 0.0 in stage 6.0 (TID 5)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 4.0 (TID 4) in 72 ms on localhost (1/1)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Removed TaskSet 4.0, whose tasks have all completed, from pool 
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - ShuffleMapStage 4 (mapPartitionsToPair at UserVisitSessionAnalyzeSpark.java:337) finished in 0.073 s
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - looking for newly runnable stages
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - running: Set(ShuffleMapStage 6)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - waiting: Set(ShuffleMapStage 5, ResultStage 7)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - failed: Set()
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Missing parents for ShuffleMapStage 5: List()
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Missing parents for ResultStage 7: List(ShuffleMapStage 5, ShuffleMapStage 6)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Submitting ShuffleMapStage 5 (MapPartitionsRDD[14] at mapToPair at UserVisitSessionAnalyzeSpark.java:374), which is now runnable
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - ensureFreeSpace(10416) called with curMem=34449, maxMem=849110630
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Block broadcast_6 stored as values in memory (estimated size 10.2 KB, free 809.7 MB)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - ensureFreeSpace(4900) called with curMem=44865, maxMem=849110630
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Block broadcast_6_piece0 stored as bytes in memory (estimated size 4.8 KB, free 809.7 MB)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Added broadcast_6_piece0 in memory on localhost:51810 (size: 4.8 KB, free: 809.8 MB)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Created broadcast 6 from broadcast at DAGScheduler.scala:861
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Submitting 1 missing tasks from ShuffleMapStage 5 (MapPartitionsRDD[14] at mapToPair at UserVisitSessionAnalyzeSpark.java:374)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Adding task set 5.0 with 1 tasks
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 6.0 (TID 5). 1087 bytes result sent to driver
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Starting task 0.0 in stage 5.0 (TID 6, localhost, PROCESS_LOCAL, 1890 bytes)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Running task 0.0 in stage 5.0 (TID 6)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Getting 0 non-empty blocks out of 1 blocks
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Started 0 remote fetches in 4 ms
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 6.0 (TID 5) in 71 ms on localhost (1/1)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Removed TaskSet 6.0, whose tasks have all completed, from pool 
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - ShuffleMapStage 6 (mapToPair at UserVisitSessionAnalyzeSpark.java:471) finished in 0.110 s
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - looking for newly runnable stages
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - running: Set(ShuffleMapStage 5)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - waiting: Set(ResultStage 7)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - failed: Set()
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Missing parents for ResultStage 7: List(ShuffleMapStage 5)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 5.0 (TID 6). 1517 bytes result sent to driver
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 5.0 (TID 6) in 38 ms on localhost (1/1)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - ShuffleMapStage 5 (mapToPair at UserVisitSessionAnalyzeSpark.java:374) finished in 0.058 s
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - looking for newly runnable stages
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - running: Set()
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - waiting: Set(ResultStage 7)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - failed: Set()
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Removed TaskSet 5.0, whose tasks have all completed, from pool 
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Missing parents for ResultStage 7: List()
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Submitting ResultStage 7 (MapPartitionsRDD[21] at filter at UserVisitSessionAnalyzeSpark.java:860), which is now runnable
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - ensureFreeSpace(3984) called with curMem=49765, maxMem=849110630
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Block broadcast_7 stored as values in memory (estimated size 3.9 KB, free 809.7 MB)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - ensureFreeSpace(2112) called with curMem=53749, maxMem=849110630
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Block broadcast_7_piece0 stored as bytes in memory (estimated size 2.1 KB, free 809.7 MB)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Added broadcast_7_piece0 in memory on localhost:51810 (size: 2.1 KB, free: 809.8 MB)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Created broadcast 7 from broadcast at DAGScheduler.scala:861
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Submitting 1 missing tasks from ResultStage 7 (MapPartitionsRDD[21] at filter at UserVisitSessionAnalyzeSpark.java:860)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Adding task set 7.0 with 1 tasks
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Starting task 0.0 in stage 7.0 (TID 7, localhost, PROCESS_LOCAL, 1974 bytes)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Running task 0.0 in stage 7.0 (TID 7)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Partition rdd_21_0 not found, computing it
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Getting 0 non-empty blocks out of 1 blocks
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Started 0 remote fetches in 2 ms
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Getting 1 non-empty blocks out of 1 blocks
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Started 0 remote fetches in 0 ms
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Removed broadcast_6_piece0 on localhost:51810 in memory (size: 4.8 KB, free: 809.8 MB)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Removed broadcast_5_piece0 on localhost:51810 in memory (size: 2.7 KB, free: 809.8 MB)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Removed broadcast_4_piece0 on localhost:51810 in memory (size: 4.5 KB, free: 809.8 MB)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Removed broadcast_3_piece0 on localhost:51810 in memory (size: 4.0 KB, free: 809.8 MB)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Cleaned accumulator 7
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - ensureFreeSpace(16) called with curMem=6112, maxMem=849110630
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Block rdd_21_0 stored as values in memory (estimated size 16.0 B, free 809.8 MB)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Added rdd_21_0 in memory on localhost:51810 (size: 16.0 B, free: 809.8 MB)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 7.0 (TID 7). 1847 bytes result sent to driver
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 7.0 (TID 7) in 553 ms on localhost (1/1)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Removed TaskSet 7.0, whose tasks have all completed, from pool 
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - ResultStage 7 (count at UserVisitSessionAnalyzeSpark.java:203) finished in 0.553 s
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Job 4 finished: count at UserVisitSessionAnalyzeSpark.java:203, took 0.747837 s
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Starting job: countByKey at UserVisitSessionAnalyzeSpark.java:1072
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Size of output statuses for shuffle 2 is 143 bytes
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Size of output statuses for shuffle 1 is 143 bytes
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Size of output statuses for shuffle 0 is 143 bytes
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Registering RDD 27 (countByKey at UserVisitSessionAnalyzeSpark.java:1072)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Got job 5 (countByKey at UserVisitSessionAnalyzeSpark.java:1072) with 1 output partitions
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Final stage: ResultStage 12(countByKey at UserVisitSessionAnalyzeSpark.java:1072)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Parents of final stage: List(ShuffleMapStage 11)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Missing parents: List(ShuffleMapStage 11)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Submitting ShuffleMapStage 11 (MapPartitionsRDD[27] at countByKey at UserVisitSessionAnalyzeSpark.java:1072), which has no missing parents
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - ensureFreeSpace(4552) called with curMem=6128, maxMem=849110630
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Block broadcast_8 stored as values in memory (estimated size 4.4 KB, free 809.8 MB)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - ensureFreeSpace(2295) called with curMem=10680, maxMem=849110630
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Block broadcast_8_piece0 stored as bytes in memory (estimated size 2.2 KB, free 809.8 MB)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Added broadcast_8_piece0 in memory on localhost:51810 (size: 2.2 KB, free: 809.8 MB)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Created broadcast 8 from broadcast at DAGScheduler.scala:861
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Submitting 1 missing tasks from ShuffleMapStage 11 (MapPartitionsRDD[27] at countByKey at UserVisitSessionAnalyzeSpark.java:1072)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Adding task set 11.0 with 1 tasks
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Starting task 0.0 in stage 11.0 (TID 8, localhost, PROCESS_LOCAL, 1963 bytes)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Running task 0.0 in stage 11.0 (TID 8)
+2018-11-13 14:31:06 INFO logInfo(Logging.scala:59) - Found block rdd_21_0 locally
+2018-11-13 14:31:07 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 11.0 (TID 8). 2326 bytes result sent to driver
+2018-11-13 14:31:07 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 11.0 (TID 8) in 80 ms on localhost (1/1)
+2018-11-13 14:31:07 INFO logInfo(Logging.scala:59) - ShuffleMapStage 11 (countByKey at UserVisitSessionAnalyzeSpark.java:1072) finished in 0.081 s
+2018-11-13 14:31:07 INFO logInfo(Logging.scala:59) - Removed TaskSet 11.0, whose tasks have all completed, from pool 
+2018-11-13 14:31:07 INFO logInfo(Logging.scala:59) - looking for newly runnable stages
+2018-11-13 14:31:07 INFO logInfo(Logging.scala:59) - running: Set()
+2018-11-13 14:31:07 INFO logInfo(Logging.scala:59) - waiting: Set(ResultStage 12)
+2018-11-13 14:31:07 INFO logInfo(Logging.scala:59) - failed: Set()
+2018-11-13 14:31:07 INFO logInfo(Logging.scala:59) - Missing parents for ResultStage 12: List()
+2018-11-13 14:31:07 INFO logInfo(Logging.scala:59) - Submitting ResultStage 12 (ShuffledRDD[28] at countByKey at UserVisitSessionAnalyzeSpark.java:1072), which is now runnable
+2018-11-13 14:31:07 INFO logInfo(Logging.scala:59) - ensureFreeSpace(2336) called with curMem=12975, maxMem=849110630
+2018-11-13 14:31:07 INFO logInfo(Logging.scala:59) - Block broadcast_9 stored as values in memory (estimated size 2.3 KB, free 809.8 MB)
+2018-11-13 14:31:07 INFO logInfo(Logging.scala:59) - ensureFreeSpace(1354) called with curMem=15311, maxMem=849110630
+2018-11-13 14:31:07 INFO logInfo(Logging.scala:59) - Block broadcast_9_piece0 stored as bytes in memory (estimated size 1354.0 B, free 809.8 MB)
+2018-11-13 14:31:07 INFO logInfo(Logging.scala:59) - Added broadcast_9_piece0 in memory on localhost:51810 (size: 1354.0 B, free: 809.8 MB)
+2018-11-13 14:31:07 INFO logInfo(Logging.scala:59) - Created broadcast 9 from broadcast at DAGScheduler.scala:861
+2018-11-13 14:31:07 INFO logInfo(Logging.scala:59) - Submitting 1 missing tasks from ResultStage 12 (ShuffledRDD[28] at countByKey at UserVisitSessionAnalyzeSpark.java:1072)
+2018-11-13 14:31:07 INFO logInfo(Logging.scala:59) - Adding task set 12.0 with 1 tasks
+2018-11-13 14:31:07 INFO logInfo(Logging.scala:59) - Starting task 0.0 in stage 12.0 (TID 9, localhost, PROCESS_LOCAL, 1901 bytes)
+2018-11-13 14:31:07 INFO logInfo(Logging.scala:59) - Running task 0.0 in stage 12.0 (TID 9)
+2018-11-13 14:31:07 INFO logInfo(Logging.scala:59) - Getting 0 non-empty blocks out of 1 blocks
+2018-11-13 14:31:07 INFO logInfo(Logging.scala:59) - Started 0 remote fetches in 0 ms
+2018-11-13 14:31:07 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 12.0 (TID 9). 1140 bytes result sent to driver
+2018-11-13 14:31:07 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 12.0 (TID 9) in 8 ms on localhost (1/1)
+2018-11-13 14:31:07 INFO logInfo(Logging.scala:59) - Removed TaskSet 12.0, whose tasks have all completed, from pool 
+2018-11-13 14:31:07 INFO logInfo(Logging.scala:59) - ResultStage 12 (countByKey at UserVisitSessionAnalyzeSpark.java:1072) finished in 0.008 s
+2018-11-13 14:31:07 INFO logInfo(Logging.scala:59) - Job 5 finished: countByKey at UserVisitSessionAnalyzeSpark.java:1072, took 0.109342 s
+2018-11-13 14:31:07 INFO logInfo(Logging.scala:59) - Invoking stop() from shutdown hook
+2018-11-13 14:31:07 INFO doStop(ContextHandler.java:843) - stopped o.s.j.s.ServletContextHandler{/static/sql,null}
+2018-11-13 14:31:07 INFO doStop(ContextHandler.java:843) - stopped o.s.j.s.ServletContextHandler{/SQL/execution/json,null}
+2018-11-13 14:31:07 INFO doStop(ContextHandler.java:843) - stopped o.s.j.s.ServletContextHandler{/SQL/execution,null}
+2018-11-13 14:31:07 INFO doStop(ContextHandler.java:843) - stopped o.s.j.s.ServletContextHandler{/SQL/json,null}
+2018-11-13 14:31:07 INFO doStop(ContextHandler.java:843) - stopped o.s.j.s.ServletContextHandler{/SQL,null}
+2018-11-13 14:31:07 INFO doStop(ContextHandler.java:843) - stopped o.s.j.s.ServletContextHandler{/metrics/json,null}
+2018-11-13 14:31:07 INFO doStop(ContextHandler.java:843) - stopped o.s.j.s.ServletContextHandler{/stages/stage/kill,null}
+2018-11-13 14:31:07 INFO doStop(ContextHandler.java:843) - stopped o.s.j.s.ServletContextHandler{/api,null}
+2018-11-13 14:31:07 INFO doStop(ContextHandler.java:843) - stopped o.s.j.s.ServletContextHandler{/,null}
+2018-11-13 14:31:07 INFO doStop(ContextHandler.java:843) - stopped o.s.j.s.ServletContextHandler{/static,null}
+2018-11-13 14:31:07 INFO doStop(ContextHandler.java:843) - stopped o.s.j.s.ServletContextHandler{/executors/threadDump/json,null}
+2018-11-13 14:31:07 INFO doStop(ContextHandler.java:843) - stopped o.s.j.s.ServletContextHandler{/executors/threadDump,null}
+2018-11-13 14:31:07 INFO doStop(ContextHandler.java:843) - stopped o.s.j.s.ServletContextHandler{/executors/json,null}
+2018-11-13 14:31:07 INFO doStop(ContextHandler.java:843) - stopped o.s.j.s.ServletContextHandler{/executors,null}
+2018-11-13 14:31:07 INFO doStop(ContextHandler.java:843) - stopped o.s.j.s.ServletContextHandler{/environment/json,null}
+2018-11-13 14:31:07 INFO doStop(ContextHandler.java:843) - stopped o.s.j.s.ServletContextHandler{/environment,null}
+2018-11-13 14:31:07 INFO doStop(ContextHandler.java:843) - stopped o.s.j.s.ServletContextHandler{/storage/rdd/json,null}
+2018-11-13 14:31:07 INFO doStop(ContextHandler.java:843) - stopped o.s.j.s.ServletContextHandler{/storage/rdd,null}
+2018-11-13 14:31:07 INFO doStop(ContextHandler.java:843) - stopped o.s.j.s.ServletContextHandler{/storage/json,null}
+2018-11-13 14:31:07 INFO doStop(ContextHandler.java:843) - stopped o.s.j.s.ServletContextHandler{/storage,null}
+2018-11-13 14:31:07 INFO doStop(ContextHandler.java:843) - stopped o.s.j.s.ServletContextHandler{/stages/pool/json,null}
+2018-11-13 14:31:07 INFO doStop(ContextHandler.java:843) - stopped o.s.j.s.ServletContextHandler{/stages/pool,null}
+2018-11-13 14:31:07 INFO doStop(ContextHandler.java:843) - stopped o.s.j.s.ServletContextHandler{/stages/stage/json,null}
+2018-11-13 14:31:07 INFO doStop(ContextHandler.java:843) - stopped o.s.j.s.ServletContextHandler{/stages/stage,null}
+2018-11-13 14:31:07 INFO doStop(ContextHandler.java:843) - stopped o.s.j.s.ServletContextHandler{/stages/json,null}
+2018-11-13 14:31:07 INFO doStop(ContextHandler.java:843) - stopped o.s.j.s.ServletContextHandler{/stages,null}
+2018-11-13 14:31:07 INFO doStop(ContextHandler.java:843) - stopped o.s.j.s.ServletContextHandler{/jobs/job/json,null}
+2018-11-13 14:31:07 INFO doStop(ContextHandler.java:843) - stopped o.s.j.s.ServletContextHandler{/jobs/job,null}
+2018-11-13 14:31:07 INFO doStop(ContextHandler.java:843) - stopped o.s.j.s.ServletContextHandler{/jobs/json,null}
+2018-11-13 14:31:07 INFO doStop(ContextHandler.java:843) - stopped o.s.j.s.ServletContextHandler{/jobs,null}
+2018-11-13 14:31:07 INFO logInfo(Logging.scala:59) - Stopped Spark web UI at http://192.168.92.1:4040
+2018-11-13 14:31:07 INFO logInfo(Logging.scala:59) - Stopping DAGScheduler
+2018-11-13 14:31:07 INFO logInfo(Logging.scala:59) - MapOutputTrackerMasterEndpoint stopped!
+2018-11-13 14:31:07 INFO logInfo(Logging.scala:59) - MemoryStore cleared
+2018-11-13 14:31:07 INFO logInfo(Logging.scala:59) - BlockManager stopped
+2018-11-13 14:31:07 INFO logInfo(Logging.scala:59) - BlockManagerMaster stopped
+2018-11-13 14:31:07 INFO logInfo(Logging.scala:59) - Successfully stopped SparkContext
+2018-11-13 14:31:07 INFO logInfo(Logging.scala:59) - Shutdown hook called
+2018-11-13 14:31:07 INFO logInfo(Logging.scala:59) - Deleting directory C:\Users\jzy\AppData\Local\Temp\spark-b4eab2f5-ac9d-4096-9f93-fe81f89bccb2
+2018-11-13 14:31:07 INFO logInfo(Logging.scala:59) - OutputCommitCoordinator stopped!
+2018-11-13 14:31:51 INFO logInfo(Logging.scala:59) - Running Spark version 1.5.1
+2018-11-13 14:31:55 INFO logInfo(Logging.scala:59) - Changing view acls to: jzy,hadoop
+2018-11-13 14:31:55 INFO logInfo(Logging.scala:59) - Changing modify acls to: jzy,hadoop
+2018-11-13 14:31:55 INFO logInfo(Logging.scala:59) - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(jzy, hadoop); users with modify permissions: Set(jzy, hadoop)
+2018-11-13 14:31:56 INFO applyOrElse(Slf4jLogger.scala:80) - Slf4jLogger started
+2018-11-13 14:31:56 INFO apply$mcV$sp(Slf4jLogger.scala:74) - Starting remoting
+2018-11-13 14:31:56 INFO apply$mcV$sp(Slf4jLogger.scala:74) - Remoting started; listening on addresses :[akka.tcp://sparkDriver@192.168.92.1:51858]
+2018-11-13 14:31:56 INFO logInfo(Logging.scala:59) - Successfully started service 'sparkDriver' on port 51858.
+2018-11-13 14:31:56 INFO logInfo(Logging.scala:59) - Registering MapOutputTracker
+2018-11-13 14:31:56 INFO logInfo(Logging.scala:59) - Registering BlockManagerMaster
+2018-11-13 14:31:56 INFO logInfo(Logging.scala:59) - Created local directory at C:\Users\jzy\AppData\Local\Temp\blockmgr-17f32593-ac29-4d83-9b33-f0c520e594f3
+2018-11-13 14:31:56 INFO logInfo(Logging.scala:59) - MemoryStore started with capacity 809.8 MB
+2018-11-13 14:31:56 INFO logInfo(Logging.scala:59) - HTTP File server directory is C:\Users\jzy\AppData\Local\Temp\spark-ed43424b-2b13-433d-ad37-7980ecfcc51b\httpd-a972e402-2daf-4374-a6fa-d9ac6c8b6a29
+2018-11-13 14:31:56 INFO logInfo(Logging.scala:59) - Starting HTTP Server
+2018-11-13 14:31:56 INFO doStart(Server.java:272) - jetty-8.y.z-SNAPSHOT
+2018-11-13 14:31:56 INFO doStart(AbstractConnector.java:338) - Started SocketConnector@0.0.0.0:51859
+2018-11-13 14:31:56 INFO logInfo(Logging.scala:59) - Successfully started service 'HTTP file server' on port 51859.
+2018-11-13 14:31:56 INFO logInfo(Logging.scala:59) - Registering OutputCommitCoordinator
+2018-11-13 14:31:56 INFO doStart(Server.java:272) - jetty-8.y.z-SNAPSHOT
+2018-11-13 14:31:56 INFO doStart(AbstractConnector.java:338) - Started SelectChannelConnector@0.0.0.0:4040
+2018-11-13 14:31:56 INFO logInfo(Logging.scala:59) - Successfully started service 'SparkUI' on port 4040.
+2018-11-13 14:31:56 INFO logInfo(Logging.scala:59) - Started SparkUI at http://192.168.92.1:4040
+2018-11-13 14:31:56 WARN logWarning(Logging.scala:71) - Using default name DAGScheduler for source because spark.app.id is not set.
+2018-11-13 14:31:56 INFO logInfo(Logging.scala:59) - Starting executor ID driver on host localhost
+2018-11-13 14:31:57 INFO logInfo(Logging.scala:59) - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 51878.
+2018-11-13 14:31:57 INFO logInfo(Logging.scala:59) - Server created on 51878
+2018-11-13 14:31:57 INFO logInfo(Logging.scala:59) - Trying to register BlockManager
+2018-11-13 14:31:57 INFO logInfo(Logging.scala:59) - Registering block manager localhost:51878 with 809.8 MB RAM, BlockManagerId(driver, localhost, 51878)
+2018-11-13 14:31:57 INFO logInfo(Logging.scala:59) - Registered BlockManager
+2018-11-13 14:31:58 INFO logInfo(Logging.scala:59) - Starting job: take at MockData.java:120
+2018-11-13 14:31:58 INFO logInfo(Logging.scala:59) - Got job 0 (take at MockData.java:120) with 1 output partitions
+2018-11-13 14:31:58 INFO logInfo(Logging.scala:59) - Final stage: ResultStage 0(take at MockData.java:120)
+2018-11-13 14:31:58 INFO logInfo(Logging.scala:59) - Parents of final stage: List()
+2018-11-13 14:31:58 INFO logInfo(Logging.scala:59) - Missing parents: List()
+2018-11-13 14:31:58 INFO logInfo(Logging.scala:59) - Submitting ResultStage 0 (MapPartitionsRDD[2] at take at MockData.java:120), which has no missing parents
+2018-11-13 14:31:58 INFO logInfo(Logging.scala:59) - ensureFreeSpace(4336) called with curMem=0, maxMem=849110630
+2018-11-13 14:31:58 INFO logInfo(Logging.scala:59) - Block broadcast_0 stored as values in memory (estimated size 4.2 KB, free 809.8 MB)
+2018-11-13 14:31:58 INFO logInfo(Logging.scala:59) - ensureFreeSpace(2235) called with curMem=4336, maxMem=849110630
+2018-11-13 14:31:58 INFO logInfo(Logging.scala:59) - Block broadcast_0_piece0 stored as bytes in memory (estimated size 2.2 KB, free 809.8 MB)
+2018-11-13 14:31:58 INFO logInfo(Logging.scala:59) - Added broadcast_0_piece0 in memory on localhost:51878 (size: 2.2 KB, free: 809.8 MB)
+2018-11-13 14:31:58 INFO logInfo(Logging.scala:59) - Created broadcast 0 from broadcast at DAGScheduler.scala:861
+2018-11-13 14:31:58 INFO logInfo(Logging.scala:59) - Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[2] at take at MockData.java:120)
+2018-11-13 14:31:58 INFO logInfo(Logging.scala:59) - Adding task set 0.0 with 1 tasks
+2018-11-13 14:31:58 WARN logWarning(Logging.scala:71) - Stage 0 contains a task of very large size (589 KB). The maximum recommended task size is 100 KB.
+2018-11-13 14:31:58 INFO logInfo(Logging.scala:59) - Starting task 0.0 in stage 0.0 (TID 0, localhost, PROCESS_LOCAL, 603999 bytes)
+2018-11-13 14:31:58 INFO logInfo(Logging.scala:59) - Running task 0.0 in stage 0.0 (TID 0)
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 0.0 (TID 0). 1168 bytes result sent to driver
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 0.0 (TID 0) in 160 ms on localhost (1/1)
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Removed TaskSet 0.0, whose tasks have all completed, from pool 
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - ResultStage 0 (take at MockData.java:120) finished in 0.170 s
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Job 0 finished: take at MockData.java:120, took 0.431064 s
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Starting job: take at MockData.java:156
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Got job 1 (take at MockData.java:156) with 1 output partitions
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Final stage: ResultStage 1(take at MockData.java:156)
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Parents of final stage: List()
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Missing parents: List()
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Submitting ResultStage 1 (MapPartitionsRDD[5] at take at MockData.java:156), which has no missing parents
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - ensureFreeSpace(4168) called with curMem=6571, maxMem=849110630
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Block broadcast_1 stored as values in memory (estimated size 4.1 KB, free 809.8 MB)
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - ensureFreeSpace(2160) called with curMem=10739, maxMem=849110630
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.1 KB, free 809.8 MB)
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Added broadcast_1_piece0 in memory on localhost:51878 (size: 2.1 KB, free: 809.8 MB)
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Created broadcast 1 from broadcast at DAGScheduler.scala:861
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Submitting 1 missing tasks from ResultStage 1 (MapPartitionsRDD[5] at take at MockData.java:156)
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Adding task set 1.0 with 1 tasks
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Starting task 0.0 in stage 1.0 (TID 1, localhost, PROCESS_LOCAL, 7405 bytes)
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Running task 0.0 in stage 1.0 (TID 1)
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 1.0 (TID 1). 1128 bytes result sent to driver
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 1.0 (TID 1) in 31 ms on localhost (1/1)
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Removed TaskSet 1.0, whose tasks have all completed, from pool 
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - ResultStage 1 (take at MockData.java:156) finished in 0.032 s
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Job 1 finished: take at MockData.java:156, took 0.058181 s
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Starting job: take at MockData.java:186
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Got job 2 (take at MockData.java:186) with 1 output partitions
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Final stage: ResultStage 2(take at MockData.java:186)
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Parents of final stage: List()
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Missing parents: List()
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Submitting ResultStage 2 (MapPartitionsRDD[8] at take at MockData.java:186), which has no missing parents
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - ensureFreeSpace(3904) called with curMem=12899, maxMem=849110630
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Block broadcast_2 stored as values in memory (estimated size 3.8 KB, free 809.8 MB)
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - ensureFreeSpace(2074) called with curMem=16803, maxMem=849110630
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Block broadcast_2_piece0 stored as bytes in memory (estimated size 2.0 KB, free 809.8 MB)
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Added broadcast_2_piece0 in memory on localhost:51878 (size: 2.0 KB, free: 809.8 MB)
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Created broadcast 2 from broadcast at DAGScheduler.scala:861
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Submitting 1 missing tasks from ResultStage 2 (MapPartitionsRDD[8] at take at MockData.java:186)
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Adding task set 2.0 with 1 tasks
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Starting task 0.0 in stage 2.0 (TID 2, localhost, PROCESS_LOCAL, 6420 bytes)
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Running task 0.0 in stage 2.0 (TID 2)
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 2.0 (TID 2). 1092 bytes result sent to driver
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Removed broadcast_1_piece0 on localhost:51878 in memory (size: 2.1 KB, free: 809.8 MB)
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 2.0 (TID 2) in 21 ms on localhost (1/1)
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Removed TaskSet 2.0, whose tasks have all completed, from pool 
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - ResultStage 2 (take at MockData.java:186) finished in 0.023 s
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Job 2 finished: take at MockData.java:186, took 0.074042 s
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Cleaned accumulator 2
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Removed broadcast_0_piece0 on localhost:51878 in memory (size: 2.2 KB, free: 809.8 MB)
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Cleaned accumulator 1
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Removed broadcast_2_piece0 on localhost:51878 in memory (size: 2.0 KB, free: 809.8 MB)
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Cleaned accumulator 3
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Starting job: count at UserVisitSessionAnalyzeSpark.java:185
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Got job 3 (count at UserVisitSessionAnalyzeSpark.java:185) with 1 output partitions
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Final stage: ResultStage 3(count at UserVisitSessionAnalyzeSpark.java:185)
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Parents of final stage: List()
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Missing parents: List()
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Submitting ResultStage 3 (MapPartitionsRDD[11] at mapPartitionsToPair at UserVisitSessionAnalyzeSpark.java:337), which has no missing parents
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - ensureFreeSpace(8216) called with curMem=0, maxMem=849110630
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Block broadcast_3 stored as values in memory (estimated size 8.0 KB, free 809.8 MB)
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - ensureFreeSpace(4096) called with curMem=8216, maxMem=849110630
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Block broadcast_3_piece0 stored as bytes in memory (estimated size 4.0 KB, free 809.8 MB)
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Added broadcast_3_piece0 in memory on localhost:51878 (size: 4.0 KB, free: 809.8 MB)
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Created broadcast 3 from broadcast at DAGScheduler.scala:861
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Submitting 1 missing tasks from ResultStage 3 (MapPartitionsRDD[11] at mapPartitionsToPair at UserVisitSessionAnalyzeSpark.java:337)
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Adding task set 3.0 with 1 tasks
+2018-11-13 14:31:59 WARN logWarning(Logging.scala:71) - Stage 3 contains a task of very large size (589 KB). The maximum recommended task size is 100 KB.
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Starting task 0.0 in stage 3.0 (TID 3, localhost, PROCESS_LOCAL, 603999 bytes)
+2018-11-13 14:31:59 INFO logInfo(Logging.scala:59) - Running task 0.0 in stage 3.0 (TID 3)
+2018-11-13 14:32:00 INFO logInfo(Logging.scala:59) - Partition rdd_11_0 not found, computing it
+2018-11-13 14:32:00 INFO logInfo(Logging.scala:59) - Code generated in 114.498914 ms
+2018-11-13 14:32:01 INFO logInfo(Logging.scala:59) - ensureFreeSpace(6486904) called with curMem=12312, maxMem=849110630
+2018-11-13 14:32:01 INFO logInfo(Logging.scala:59) - Block rdd_11_0 stored as values in memory (estimated size 6.2 MB, free 803.6 MB)
+2018-11-13 14:32:01 INFO logInfo(Logging.scala:59) - Added rdd_11_0 in memory on localhost:51878 (size: 6.2 MB, free: 803.6 MB)
+2018-11-13 14:32:01 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 3.0 (TID 3). 1703 bytes result sent to driver
+2018-11-13 14:32:01 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 3.0 (TID 3) in 1790 ms on localhost (1/1)
+2018-11-13 14:32:01 INFO logInfo(Logging.scala:59) - Removed TaskSet 3.0, whose tasks have all completed, from pool 
+2018-11-13 14:32:01 INFO logInfo(Logging.scala:59) - ResultStage 3 (count at UserVisitSessionAnalyzeSpark.java:185) finished in 1.790 s
+2018-11-13 14:32:01 INFO logInfo(Logging.scala:59) - Job 3 finished: count at UserVisitSessionAnalyzeSpark.java:185, took 1.815668 s
+2018-11-13 14:32:01 INFO logInfo(Logging.scala:59) - Starting job: count at UserVisitSessionAnalyzeSpark.java:203
+2018-11-13 14:32:01 INFO logInfo(Logging.scala:59) - Registering RDD 11 (mapPartitionsToPair at UserVisitSessionAnalyzeSpark.java:337)
+2018-11-13 14:32:01 INFO logInfo(Logging.scala:59) - Registering RDD 14 (mapToPair at UserVisitSessionAnalyzeSpark.java:374)
+2018-11-13 14:32:01 INFO logInfo(Logging.scala:59) - Registering RDD 16 (mapToPair at UserVisitSessionAnalyzeSpark.java:471)
+2018-11-13 14:32:01 INFO logInfo(Logging.scala:59) - Got job 4 (count at UserVisitSessionAnalyzeSpark.java:203) with 1 output partitions
+2018-11-13 14:32:01 INFO logInfo(Logging.scala:59) - Final stage: ResultStage 7(count at UserVisitSessionAnalyzeSpark.java:203)
+2018-11-13 14:32:01 INFO logInfo(Logging.scala:59) - Parents of final stage: List(ShuffleMapStage 5, ShuffleMapStage 6)
+2018-11-13 14:32:01 INFO logInfo(Logging.scala:59) - Missing parents: List(ShuffleMapStage 5, ShuffleMapStage 6)
+2018-11-13 14:32:01 INFO logInfo(Logging.scala:59) - Submitting ShuffleMapStage 4 (MapPartitionsRDD[11] at mapPartitionsToPair at UserVisitSessionAnalyzeSpark.java:337), which has no missing parents
+2018-11-13 14:32:01 INFO logInfo(Logging.scala:59) - ensureFreeSpace(9576) called with curMem=6499216, maxMem=849110630
+2018-11-13 14:32:01 INFO logInfo(Logging.scala:59) - Block broadcast_4 stored as values in memory (estimated size 9.4 KB, free 803.6 MB)
+2018-11-13 14:32:01 INFO logInfo(Logging.scala:59) - ensureFreeSpace(4616) called with curMem=6508792, maxMem=849110630
+2018-11-13 14:32:01 INFO logInfo(Logging.scala:59) - Block broadcast_4_piece0 stored as bytes in memory (estimated size 4.5 KB, free 803.6 MB)
+2018-11-13 14:32:01 INFO logInfo(Logging.scala:59) - Added broadcast_4_piece0 in memory on localhost:51878 (size: 4.5 KB, free: 803.6 MB)
+2018-11-13 14:32:01 INFO logInfo(Logging.scala:59) - Created broadcast 4 from broadcast at DAGScheduler.scala:861
+2018-11-13 14:32:01 INFO logInfo(Logging.scala:59) - Submitting 1 missing tasks from ShuffleMapStage 4 (MapPartitionsRDD[11] at mapPartitionsToPair at UserVisitSessionAnalyzeSpark.java:337)
+2018-11-13 14:32:01 INFO logInfo(Logging.scala:59) - Adding task set 4.0 with 1 tasks
+2018-11-13 14:32:01 INFO logInfo(Logging.scala:59) - Submitting ShuffleMapStage 6 (MapPartitionsRDD[16] at mapToPair at UserVisitSessionAnalyzeSpark.java:471), which has no missing parents
+2018-11-13 14:32:01 INFO logInfo(Logging.scala:59) - ensureFreeSpace(5216) called with curMem=6513408, maxMem=849110630
+2018-11-13 14:32:01 INFO logInfo(Logging.scala:59) - Block broadcast_5 stored as values in memory (estimated size 5.1 KB, free 803.6 MB)
+2018-11-13 14:32:01 INFO logInfo(Logging.scala:59) - ensureFreeSpace(2721) called with curMem=6518624, maxMem=849110630
+2018-11-13 14:32:01 INFO logInfo(Logging.scala:59) - Block broadcast_5_piece0 stored as bytes in memory (estimated size 2.7 KB, free 803.6 MB)
+2018-11-13 14:32:01 INFO logInfo(Logging.scala:59) - Added broadcast_5_piece0 in memory on localhost:51878 (size: 2.7 KB, free: 803.6 MB)
+2018-11-13 14:32:01 INFO logInfo(Logging.scala:59) - Created broadcast 5 from broadcast at DAGScheduler.scala:861
+2018-11-13 14:32:01 INFO logInfo(Logging.scala:59) - Submitting 1 missing tasks from ShuffleMapStage 6 (MapPartitionsRDD[16] at mapToPair at UserVisitSessionAnalyzeSpark.java:471)
+2018-11-13 14:32:01 INFO logInfo(Logging.scala:59) - Adding task set 6.0 with 1 tasks
+2018-11-13 14:32:01 WARN logWarning(Logging.scala:71) - Stage 4 contains a task of very large size (589 KB). The maximum recommended task size is 100 KB.
+2018-11-13 14:32:01 INFO logInfo(Logging.scala:59) - Starting task 0.0 in stage 4.0 (TID 4, localhost, PROCESS_LOCAL, 603988 bytes)
+2018-11-13 14:32:01 INFO logInfo(Logging.scala:59) - Running task 0.0 in stage 4.0 (TID 4)
+2018-11-13 14:32:01 INFO logInfo(Logging.scala:59) - Removed broadcast_3_piece0 on localhost:51878 in memory (size: 4.0 KB, free: 803.6 MB)
+2018-11-13 14:32:01 INFO logInfo(Logging.scala:59) - Cleaned accumulator 7
+2018-11-13 14:32:01 INFO logInfo(Logging.scala:59) - Found block rdd_11_0 locally
+2018-11-13 14:32:02 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 4.0 (TID 4). 2396 bytes result sent to driver
+2018-11-13 14:32:02 INFO logInfo(Logging.scala:59) - Starting task 0.0 in stage 6.0 (TID 5, localhost, PROCESS_LOCAL, 7394 bytes)
+2018-11-13 14:32:02 INFO logInfo(Logging.scala:59) - Running task 0.0 in stage 6.0 (TID 5)
+2018-11-13 14:32:02 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 4.0 (TID 4) in 233 ms on localhost (1/1)
+2018-11-13 14:32:02 INFO logInfo(Logging.scala:59) - Removed TaskSet 4.0, whose tasks have all completed, from pool 
+2018-11-13 14:32:02 INFO logInfo(Logging.scala:59) - ShuffleMapStage 4 (mapPartitionsToPair at UserVisitSessionAnalyzeSpark.java:337) finished in 0.236 s
+2018-11-13 14:32:02 INFO logInfo(Logging.scala:59) - looking for newly runnable stages
+2018-11-13 14:32:02 INFO logInfo(Logging.scala:59) - running: Set(ShuffleMapStage 6)
+2018-11-13 14:32:02 INFO logInfo(Logging.scala:59) - waiting: Set(ShuffleMapStage 5, ResultStage 7)
+2018-11-13 14:32:02 INFO logInfo(Logging.scala:59) - failed: Set()
+2018-11-13 14:32:02 INFO logInfo(Logging.scala:59) - Missing parents for ShuffleMapStage 5: List()
+2018-11-13 14:32:02 INFO logInfo(Logging.scala:59) - Missing parents for ResultStage 7: List(ShuffleMapStage 5, ShuffleMapStage 6)
+2018-11-13 14:32:02 INFO logInfo(Logging.scala:59) - Submitting ShuffleMapStage 5 (MapPartitionsRDD[14] at mapToPair at UserVisitSessionAnalyzeSpark.java:374), which is now runnable
+2018-11-13 14:32:02 INFO logInfo(Logging.scala:59) - ensureFreeSpace(10416) called with curMem=6509033, maxMem=849110630
+2018-11-13 14:32:02 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 6.0 (TID 5). 1087 bytes result sent to driver
+2018-11-13 14:32:02 INFO logInfo(Logging.scala:59) - Block broadcast_6 stored as values in memory (estimated size 10.2 KB, free 803.6 MB)
+2018-11-13 14:32:02 INFO logInfo(Logging.scala:59) - ensureFreeSpace(4904) called with curMem=6519449, maxMem=849110630
+2018-11-13 14:32:02 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 6.0 (TID 5) in 28 ms on localhost (1/1)
+2018-11-13 14:32:02 INFO logInfo(Logging.scala:59) - Block broadcast_6_piece0 stored as bytes in memory (estimated size 4.8 KB, free 803.6 MB)
+2018-11-13 14:32:02 INFO logInfo(Logging.scala:59) - Removed TaskSet 6.0, whose tasks have all completed, from pool 
+2018-11-13 14:32:02 INFO logInfo(Logging.scala:59) - Added broadcast_6_piece0 in memory on localhost:51878 (size: 4.8 KB, free: 803.6 MB)
+2018-11-13 14:32:02 INFO logInfo(Logging.scala:59) - Created broadcast 6 from broadcast at DAGScheduler.scala:861
+2018-11-13 14:32:02 INFO logInfo(Logging.scala:59) - Submitting 1 missing tasks from ShuffleMapStage 5 (MapPartitionsRDD[14] at mapToPair at UserVisitSessionAnalyzeSpark.java:374)
+2018-11-13 14:32:02 INFO logInfo(Logging.scala:59) - Adding task set 5.0 with 1 tasks
+2018-11-13 14:32:02 INFO logInfo(Logging.scala:59) - ShuffleMapStage 6 (mapToPair at UserVisitSessionAnalyzeSpark.java:471) finished in 0.231 s
+2018-11-13 14:32:02 INFO logInfo(Logging.scala:59) - looking for newly runnable stages
+2018-11-13 14:32:02 INFO logInfo(Logging.scala:59) - running: Set(ShuffleMapStage 5)
+2018-11-13 14:32:02 INFO logInfo(Logging.scala:59) - waiting: Set(ResultStage 7)
+2018-11-13 14:32:02 INFO logInfo(Logging.scala:59) - failed: Set()
+2018-11-13 14:32:02 INFO logInfo(Logging.scala:59) - Starting task 0.0 in stage 5.0 (TID 6, localhost, PROCESS_LOCAL, 1890 bytes)
+2018-11-13 14:32:02 INFO logInfo(Logging.scala:59) - Running task 0.0 in stage 5.0 (TID 6)
+2018-11-13 14:32:02 INFO logInfo(Logging.scala:59) - Missing parents for ResultStage 7: List(ShuffleMapStage 5)
+2018-11-13 14:32:02 INFO logInfo(Logging.scala:59) - Getting 1 non-empty blocks out of 1 blocks
+2018-11-13 14:32:02 INFO logInfo(Logging.scala:59) - Started 0 remote fetches in 4 ms
+2018-11-13 14:32:02 INFO logInfo(Logging.scala:59) - Removed broadcast_5_piece0 on localhost:51878 in memory (size: 2.7 KB, free: 803.6 MB)
+2018-11-13 14:32:02 INFO logInfo(Logging.scala:59) - Removed broadcast_4_piece0 on localhost:51878 in memory (size: 4.5 KB, free: 803.6 MB)
+2018-11-13 14:32:04 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 5.0 (TID 6). 1517 bytes result sent to driver
+2018-11-13 14:32:04 INFO logInfo(Logging.scala:59) - ShuffleMapStage 5 (mapToPair at UserVisitSessionAnalyzeSpark.java:374) finished in 2.742 s
+2018-11-13 14:32:04 INFO logInfo(Logging.scala:59) - looking for newly runnable stages
+2018-11-13 14:32:04 INFO logInfo(Logging.scala:59) - running: Set()
+2018-11-13 14:32:04 INFO logInfo(Logging.scala:59) - waiting: Set(ResultStage 7)
+2018-11-13 14:32:04 INFO logInfo(Logging.scala:59) - failed: Set()
+2018-11-13 14:32:04 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 5.0 (TID 6) in 2741 ms on localhost (1/1)
+2018-11-13 14:32:04 INFO logInfo(Logging.scala:59) - Removed TaskSet 5.0, whose tasks have all completed, from pool 
+2018-11-13 14:32:04 INFO logInfo(Logging.scala:59) - Missing parents for ResultStage 7: List()
+2018-11-13 14:32:04 INFO logInfo(Logging.scala:59) - Submitting ResultStage 7 (MapPartitionsRDD[21] at filter at UserVisitSessionAnalyzeSpark.java:860), which is now runnable
+2018-11-13 14:32:04 INFO logInfo(Logging.scala:59) - ensureFreeSpace(3984) called with curMem=6502224, maxMem=849110630
+2018-11-13 14:32:04 INFO logInfo(Logging.scala:59) - Block broadcast_7 stored as values in memory (estimated size 3.9 KB, free 803.6 MB)
+2018-11-13 14:32:04 INFO logInfo(Logging.scala:59) - ensureFreeSpace(2112) called with curMem=6506208, maxMem=849110630
+2018-11-13 14:32:04 INFO logInfo(Logging.scala:59) - Block broadcast_7_piece0 stored as bytes in memory (estimated size 2.1 KB, free 803.6 MB)
+2018-11-13 14:32:04 INFO logInfo(Logging.scala:59) - Added broadcast_7_piece0 in memory on localhost:51878 (size: 2.1 KB, free: 803.6 MB)
+2018-11-13 14:32:04 INFO logInfo(Logging.scala:59) - Created broadcast 7 from broadcast at DAGScheduler.scala:861
+2018-11-13 14:32:04 INFO logInfo(Logging.scala:59) - Submitting 1 missing tasks from ResultStage 7 (MapPartitionsRDD[21] at filter at UserVisitSessionAnalyzeSpark.java:860)
+2018-11-13 14:32:04 INFO logInfo(Logging.scala:59) - Adding task set 7.0 with 1 tasks
+2018-11-13 14:32:04 INFO logInfo(Logging.scala:59) - Starting task 0.0 in stage 7.0 (TID 7, localhost, PROCESS_LOCAL, 1974 bytes)
+2018-11-13 14:32:04 INFO logInfo(Logging.scala:59) - Running task 0.0 in stage 7.0 (TID 7)
+2018-11-13 14:32:04 INFO logInfo(Logging.scala:59) - Partition rdd_21_0 not found, computing it
+2018-11-13 14:32:04 INFO logInfo(Logging.scala:59) - Getting 1 non-empty blocks out of 1 blocks
+2018-11-13 14:32:04 INFO logInfo(Logging.scala:59) - Started 0 remote fetches in 0 ms
+2018-11-13 14:32:04 INFO logInfo(Logging.scala:59) - Getting 1 non-empty blocks out of 1 blocks
+2018-11-13 14:32:04 INFO logInfo(Logging.scala:59) - Started 0 remote fetches in 0 ms
+2018-11-13 14:32:04 INFO logInfo(Logging.scala:59) - ensureFreeSpace(86800) called with curMem=6508320, maxMem=849110630
+2018-11-13 14:32:04 INFO logInfo(Logging.scala:59) - Block rdd_21_0 stored as values in memory (estimated size 84.8 KB, free 803.5 MB)
+2018-11-13 14:32:04 INFO logInfo(Logging.scala:59) - Added rdd_21_0 in memory on localhost:51878 (size: 84.8 KB, free: 803.5 MB)
+2018-11-13 14:32:04 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 7.0 (TID 7). 1857 bytes result sent to driver
+2018-11-13 14:32:04 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 7.0 (TID 7) in 138 ms on localhost (1/1)
+2018-11-13 14:32:04 INFO logInfo(Logging.scala:59) - Removed TaskSet 7.0, whose tasks have all completed, from pool 
+2018-11-13 14:32:04 INFO logInfo(Logging.scala:59) - ResultStage 7 (count at UserVisitSessionAnalyzeSpark.java:203) finished in 0.138 s
+2018-11-13 14:32:04 INFO logInfo(Logging.scala:59) - Job 4 finished: count at UserVisitSessionAnalyzeSpark.java:203, took 3.172959 s
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Starting job: countByKey at UserVisitSessionAnalyzeSpark.java:1072
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Size of output statuses for shuffle 2 is 143 bytes
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Size of output statuses for shuffle 1 is 143 bytes
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Size of output statuses for shuffle 0 is 143 bytes
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Registering RDD 27 (countByKey at UserVisitSessionAnalyzeSpark.java:1072)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Got job 5 (countByKey at UserVisitSessionAnalyzeSpark.java:1072) with 1 output partitions
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Final stage: ResultStage 12(countByKey at UserVisitSessionAnalyzeSpark.java:1072)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Parents of final stage: List(ShuffleMapStage 11)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Missing parents: List(ShuffleMapStage 11)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Submitting ShuffleMapStage 11 (MapPartitionsRDD[27] at countByKey at UserVisitSessionAnalyzeSpark.java:1072), which has no missing parents
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - ensureFreeSpace(4552) called with curMem=6595120, maxMem=849110630
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Block broadcast_8 stored as values in memory (estimated size 4.4 KB, free 803.5 MB)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - ensureFreeSpace(2295) called with curMem=6599672, maxMem=849110630
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Block broadcast_8_piece0 stored as bytes in memory (estimated size 2.2 KB, free 803.5 MB)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Added broadcast_8_piece0 in memory on localhost:51878 (size: 2.2 KB, free: 803.5 MB)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Removed broadcast_7_piece0 on localhost:51878 in memory (size: 2.1 KB, free: 803.5 MB)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Created broadcast 8 from broadcast at DAGScheduler.scala:861
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Submitting 1 missing tasks from ShuffleMapStage 11 (MapPartitionsRDD[27] at countByKey at UserVisitSessionAnalyzeSpark.java:1072)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Adding task set 11.0 with 1 tasks
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Starting task 0.0 in stage 11.0 (TID 8, localhost, PROCESS_LOCAL, 1963 bytes)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Running task 0.0 in stage 11.0 (TID 8)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Cleaned accumulator 12
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Found block rdd_21_0 locally
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Removed broadcast_6_piece0 on localhost:51878 in memory (size: 4.8 KB, free: 803.5 MB)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Cleaned accumulator 11
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Cleaned accumulator 10
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Cleaned accumulator 9
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 11.0 (TID 8). 2326 bytes result sent to driver
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - ShuffleMapStage 11 (countByKey at UserVisitSessionAnalyzeSpark.java:1072) finished in 0.053 s
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - looking for newly runnable stages
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - running: Set()
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - waiting: Set(ResultStage 12)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - failed: Set()
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Missing parents for ResultStage 12: List()
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Submitting ResultStage 12 (ShuffledRDD[28] at countByKey at UserVisitSessionAnalyzeSpark.java:1072), which is now runnable
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 11.0 (TID 8) in 52 ms on localhost (1/1)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Removed TaskSet 11.0, whose tasks have all completed, from pool 
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - ensureFreeSpace(2336) called with curMem=6580551, maxMem=849110630
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Block broadcast_9 stored as values in memory (estimated size 2.3 KB, free 803.5 MB)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - ensureFreeSpace(1354) called with curMem=6582887, maxMem=849110630
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Block broadcast_9_piece0 stored as bytes in memory (estimated size 1354.0 B, free 803.5 MB)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Added broadcast_9_piece0 in memory on localhost:51878 (size: 1354.0 B, free: 803.5 MB)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Created broadcast 9 from broadcast at DAGScheduler.scala:861
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Submitting 1 missing tasks from ResultStage 12 (ShuffledRDD[28] at countByKey at UserVisitSessionAnalyzeSpark.java:1072)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Adding task set 12.0 with 1 tasks
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Starting task 0.0 in stage 12.0 (TID 9, localhost, PROCESS_LOCAL, 1901 bytes)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Running task 0.0 in stage 12.0 (TID 9)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Getting 1 non-empty blocks out of 1 blocks
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Started 0 remote fetches in 1 ms
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 12.0 (TID 9). 1580 bytes result sent to driver
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 12.0 (TID 9) in 10 ms on localhost (1/1)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - ResultStage 12 (countByKey at UserVisitSessionAnalyzeSpark.java:1072) finished in 0.010 s
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Job 5 finished: countByKey at UserVisitSessionAnalyzeSpark.java:1072, took 0.115129 s
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Removed TaskSet 12.0, whose tasks have all completed, from pool 
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - ensureFreeSpace(4672) called with curMem=6584241, maxMem=849110630
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Block broadcast_10 stored as values in memory (estimated size 4.6 KB, free 803.5 MB)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - ensureFreeSpace(389) called with curMem=6588913, maxMem=849110630
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Block broadcast_10_piece0 stored as bytes in memory (estimated size 389.0 B, free 803.5 MB)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Added broadcast_10_piece0 in memory on localhost:51878 (size: 389.0 B, free: 803.5 MB)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Created broadcast 10 from broadcast at UserVisitSessionAnalyzeSpark.java:1205
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Starting job: foreachPartition at UserVisitSessionAnalyzeSpark.java:1316
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Size of output statuses for shuffle 2 is 143 bytes
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Size of output statuses for shuffle 1 is 143 bytes
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Size of output statuses for shuffle 0 is 143 bytes
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Registering RDD 26 (mapToPair at UserVisitSessionAnalyzeSpark.java:1031)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Registering RDD 31 (flatMapToPair at UserVisitSessionAnalyzeSpark.java:1220)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Registering RDD 11 (mapPartitionsToPair at UserVisitSessionAnalyzeSpark.java:337)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Registering RDD 21 (filter at UserVisitSessionAnalyzeSpark.java:860)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Registering RDD 25 (mapToPair at UserVisitSessionAnalyzeSpark.java:1003)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Got job 6 (foreachPartition at UserVisitSessionAnalyzeSpark.java:1316) with 1 output partitions
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Final stage: ResultStage 21(foreachPartition at UserVisitSessionAnalyzeSpark.java:1316)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Parents of final stage: List(ShuffleMapStage 20, ShuffleMapStage 17)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Missing parents: List(ShuffleMapStage 20, ShuffleMapStage 17)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Submitting ShuffleMapStage 16 (MapPartitionsRDD[26] at mapToPair at UserVisitSessionAnalyzeSpark.java:1031), which has no missing parents
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - ensureFreeSpace(5320) called with curMem=6589302, maxMem=849110630
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Block broadcast_11 stored as values in memory (estimated size 5.2 KB, free 803.5 MB)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - ensureFreeSpace(2645) called with curMem=6594622, maxMem=849110630
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Block broadcast_11_piece0 stored as bytes in memory (estimated size 2.6 KB, free 803.5 MB)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Added broadcast_11_piece0 in memory on localhost:51878 (size: 2.6 KB, free: 803.5 MB)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Created broadcast 11 from broadcast at DAGScheduler.scala:861
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Submitting 1 missing tasks from ShuffleMapStage 16 (MapPartitionsRDD[26] at mapToPair at UserVisitSessionAnalyzeSpark.java:1031)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Adding task set 16.0 with 1 tasks
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Starting task 0.0 in stage 16.0 (TID 10, localhost, PROCESS_LOCAL, 1963 bytes)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Running task 0.0 in stage 16.0 (TID 10)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Found block rdd_21_0 locally
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 16.0 (TID 10). 2326 bytes result sent to driver
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 16.0 (TID 10) in 19 ms on localhost (1/1)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Removed TaskSet 16.0, whose tasks have all completed, from pool 
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Submitting ShuffleMapStage 18 (MapPartitionsRDD[11] at mapPartitionsToPair at UserVisitSessionAnalyzeSpark.java:337), which has no missing parents
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - ensureFreeSpace(8680) called with curMem=6597267, maxMem=849110630
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Block broadcast_12 stored as values in memory (estimated size 8.5 KB, free 803.5 MB)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - ensureFreeSpace(4320) called with curMem=6605947, maxMem=849110630
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Block broadcast_12_piece0 stored as bytes in memory (estimated size 4.2 KB, free 803.5 MB)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Added broadcast_12_piece0 in memory on localhost:51878 (size: 4.2 KB, free: 803.5 MB)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Created broadcast 12 from broadcast at DAGScheduler.scala:861
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Submitting 1 missing tasks from ShuffleMapStage 18 (MapPartitionsRDD[11] at mapPartitionsToPair at UserVisitSessionAnalyzeSpark.java:337)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Adding task set 18.0 with 1 tasks
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Submitting ShuffleMapStage 19 (MapPartitionsRDD[21] at filter at UserVisitSessionAnalyzeSpark.java:860), which has no missing parents
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - ensureFreeSpace(3896) called with curMem=6610267, maxMem=849110630
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Block broadcast_13 stored as values in memory (estimated size 3.8 KB, free 803.5 MB)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - ensureFreeSpace(2079) called with curMem=6614163, maxMem=849110630
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Block broadcast_13_piece0 stored as bytes in memory (estimated size 2.0 KB, free 803.5 MB)
+2018-11-13 14:32:05 WARN logWarning(Logging.scala:71) - Stage 18 contains a task of very large size (589 KB). The maximum recommended task size is 100 KB.
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Starting task 0.0 in stage 18.0 (TID 11, localhost, PROCESS_LOCAL, 603988 bytes)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Running task 0.0 in stage 18.0 (TID 11)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Found block rdd_11_0 locally
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Added broadcast_13_piece0 in memory on localhost:51878 (size: 2.0 KB, free: 803.5 MB)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 18.0 (TID 11). 2396 bytes result sent to driver
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Created broadcast 13 from broadcast at DAGScheduler.scala:861
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Submitting 1 missing tasks from ShuffleMapStage 19 (MapPartitionsRDD[21] at filter at UserVisitSessionAnalyzeSpark.java:860)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Adding task set 19.0 with 1 tasks
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Starting task 0.0 in stage 19.0 (TID 12, localhost, PROCESS_LOCAL, 1963 bytes)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - ShuffleMapStage 16 (mapToPair at UserVisitSessionAnalyzeSpark.java:1031) finished in 0.184 s
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - looking for newly runnable stages
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - running: Set(ShuffleMapStage 19, ShuffleMapStage 18)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - waiting: Set(ShuffleMapStage 20, ShuffleMapStage 17, ResultStage 21)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - failed: Set()
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Running task 0.0 in stage 19.0 (TID 12)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Found block rdd_21_0 locally
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 18.0 (TID 11) in 144 ms on localhost (1/1)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Removed TaskSet 18.0, whose tasks have all completed, from pool 
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 19.0 (TID 12). 2326 bytes result sent to driver
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Missing parents for ShuffleMapStage 20: List(ShuffleMapStage 19, ShuffleMapStage 18)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Missing parents for ShuffleMapStage 17: List()
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Missing parents for ResultStage 21: List(ShuffleMapStage 20, ShuffleMapStage 17)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Submitting ShuffleMapStage 17 (MapPartitionsRDD[31] at flatMapToPair at UserVisitSessionAnalyzeSpark.java:1220), which is now runnable
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - ensureFreeSpace(6704) called with curMem=6616242, maxMem=849110630
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Block broadcast_14 stored as values in memory (estimated size 6.5 KB, free 803.5 MB)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - ensureFreeSpace(3189) called with curMem=6622946, maxMem=849110630
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 19.0 (TID 12) in 20 ms on localhost (1/1)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Removed TaskSet 19.0, whose tasks have all completed, from pool 
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Block broadcast_14_piece0 stored as bytes in memory (estimated size 3.1 KB, free 803.5 MB)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Added broadcast_14_piece0 in memory on localhost:51878 (size: 3.1 KB, free: 803.5 MB)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Created broadcast 14 from broadcast at DAGScheduler.scala:861
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Submitting 1 missing tasks from ShuffleMapStage 17 (MapPartitionsRDD[31] at flatMapToPair at UserVisitSessionAnalyzeSpark.java:1220)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Adding task set 17.0 with 1 tasks
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Starting task 0.0 in stage 17.0 (TID 13, localhost, PROCESS_LOCAL, 1890 bytes)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Running task 0.0 in stage 17.0 (TID 13)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Getting 1 non-empty blocks out of 1 blocks
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Started 0 remote fetches in 0 ms
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - ShuffleMapStage 18 (mapPartitionsToPair at UserVisitSessionAnalyzeSpark.java:337) finished in 0.165 s
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - looking for newly runnable stages
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - running: Set(ShuffleMapStage 19, ShuffleMapStage 17)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - waiting: Set(ShuffleMapStage 20, ResultStage 21)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - failed: Set()
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Missing parents for ShuffleMapStage 20: List(ShuffleMapStage 19)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Missing parents for ResultStage 21: List(ShuffleMapStage 20, ShuffleMapStage 17)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - ShuffleMapStage 19 (filter at UserVisitSessionAnalyzeSpark.java:860) finished in 0.030 s
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - looking for newly runnable stages
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - running: Set(ShuffleMapStage 17)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - waiting: Set(ShuffleMapStage 20, ResultStage 21)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - failed: Set()
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Missing parents for ShuffleMapStage 20: List()
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Missing parents for ResultStage 21: List(ShuffleMapStage 20, ShuffleMapStage 17)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Submitting ShuffleMapStage 20 (MapPartitionsRDD[25] at mapToPair at UserVisitSessionAnalyzeSpark.java:1003), which is now runnable
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - ensureFreeSpace(2960) called with curMem=6626135, maxMem=849110630
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Block broadcast_15 stored as values in memory (estimated size 2.9 KB, free 803.5 MB)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - ensureFreeSpace(1646) called with curMem=6629095, maxMem=849110630
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Block broadcast_15_piece0 stored as bytes in memory (estimated size 1646.0 B, free 803.5 MB)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Added broadcast_15_piece0 in memory on localhost:51878 (size: 1646.0 B, free: 803.5 MB)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Created broadcast 15 from broadcast at DAGScheduler.scala:861
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Submitting 1 missing tasks from ShuffleMapStage 20 (MapPartitionsRDD[25] at mapToPair at UserVisitSessionAnalyzeSpark.java:1003)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Adding task set 20.0 with 1 tasks
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 17.0 (TID 13). 1447 bytes result sent to driver
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Starting task 0.0 in stage 20.0 (TID 14, localhost, PROCESS_LOCAL, 1963 bytes)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Running task 0.0 in stage 20.0 (TID 14)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Partition rdd_25_0 not found, computing it
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Getting 1 non-empty blocks out of 1 blocks
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Started 0 remote fetches in 1 ms
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Getting 1 non-empty blocks out of 1 blocks
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Started 0 remote fetches in 0 ms
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 17.0 (TID 13) in 184 ms on localhost (1/1)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Removed TaskSet 17.0, whose tasks have all completed, from pool 
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - ShuffleMapStage 17 (flatMapToPair at UserVisitSessionAnalyzeSpark.java:1220) finished in 0.186 s
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - looking for newly runnable stages
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - running: Set(ShuffleMapStage 20)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - waiting: Set(ResultStage 21)
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - failed: Set()
+2018-11-13 14:32:05 INFO logInfo(Logging.scala:59) - Missing parents for ResultStage 21: List(ShuffleMapStage 20)
+2018-11-13 14:32:06 INFO logInfo(Logging.scala:59) - Cleaned shuffle 3
+2018-11-13 14:32:06 INFO logInfo(Logging.scala:59) - Removed broadcast_14_piece0 on localhost:51878 in memory (size: 3.1 KB, free: 803.5 MB)
+2018-11-13 14:32:06 INFO logInfo(Logging.scala:59) - Removed broadcast_13_piece0 on localhost:51878 in memory (size: 2.0 KB, free: 803.5 MB)
+2018-11-13 14:32:06 INFO logInfo(Logging.scala:59) - Removed broadcast_12_piece0 on localhost:51878 in memory (size: 4.2 KB, free: 803.5 MB)
+2018-11-13 14:32:06 INFO logInfo(Logging.scala:59) - Removed broadcast_11_piece0 on localhost:51878 in memory (size: 2.6 KB, free: 803.5 MB)
+2018-11-13 14:32:06 INFO logInfo(Logging.scala:59) - Removed broadcast_9_piece0 on localhost:51878 in memory (size: 1354.0 B, free: 803.5 MB)
+2018-11-13 14:32:06 INFO logInfo(Logging.scala:59) - Cleaned accumulator 14
+2018-11-13 14:32:06 INFO logInfo(Logging.scala:59) - Removed broadcast_8_piece0 on localhost:51878 in memory (size: 2.2 KB, free: 803.5 MB)
+2018-11-13 14:32:06 INFO logInfo(Logging.scala:59) - Cleaned accumulator 13
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - ensureFreeSpace(4856232) called with curMem=6583371, maxMem=849110630
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Block rdd_25_0 stored as values in memory (estimated size 4.6 MB, free 798.9 MB)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Added rdd_25_0 in memory on localhost:51878 (size: 4.6 MB, free: 798.9 MB)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 20.0 (TID 14). 1883 bytes result sent to driver
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 20.0 (TID 14) in 2360 ms on localhost (1/1)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Removed TaskSet 20.0, whose tasks have all completed, from pool 
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - ShuffleMapStage 20 (mapToPair at UserVisitSessionAnalyzeSpark.java:1003) finished in 2.508 s
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - looking for newly runnable stages
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - running: Set()
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - waiting: Set(ResultStage 21)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - failed: Set()
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Missing parents for ResultStage 21: List()
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Submitting ResultStage 21 (MapPartitionsRDD[34] at join at UserVisitSessionAnalyzeSpark.java:1287), which is now runnable
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - ensureFreeSpace(2960) called with curMem=11439603, maxMem=849110630
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Block broadcast_16 stored as values in memory (estimated size 2.9 KB, free 798.9 MB)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - ensureFreeSpace(1681) called with curMem=11442563, maxMem=849110630
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Block broadcast_16_piece0 stored as bytes in memory (estimated size 1681.0 B, free 798.9 MB)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Added broadcast_16_piece0 in memory on localhost:51878 (size: 1681.0 B, free: 798.9 MB)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Created broadcast 16 from broadcast at DAGScheduler.scala:861
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Submitting 1 missing tasks from ResultStage 21 (MapPartitionsRDD[34] at join at UserVisitSessionAnalyzeSpark.java:1287)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Adding task set 21.0 with 1 tasks
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Starting task 0.0 in stage 21.0 (TID 15, localhost, PROCESS_LOCAL, 1974 bytes)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Running task 0.0 in stage 21.0 (TID 15)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Getting 1 non-empty blocks out of 1 blocks
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Started 0 remote fetches in 0 ms
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Getting 1 non-empty blocks out of 1 blocks
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Started 0 remote fetches in 1 ms
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 21.0 (TID 15). 1123 bytes result sent to driver
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 21.0 (TID 15) in 412 ms on localhost (1/1)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Removed TaskSet 21.0, whose tasks have all completed, from pool 
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - ResultStage 21 (foreachPartition at UserVisitSessionAnalyzeSpark.java:1316) finished in 0.415 s
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Job 6 finished: foreachPartition at UserVisitSessionAnalyzeSpark.java:1316, took 3.202159 s
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Starting job: take at UserVisitSessionAnalyzeSpark.java:1593
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Size of output statuses for shuffle 2 is 143 bytes
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Size of output statuses for shuffle 1 is 143 bytes
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Size of output statuses for shuffle 0 is 143 bytes
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Size of output statuses for shuffle 4 is 143 bytes
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Size of output statuses for shuffle 5 is 143 bytes
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Registering RDD 36 (distinct at UserVisitSessionAnalyzeSpark.java:1515)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Registering RDD 40 (mapToPair at UserVisitSessionAnalyzeSpark.java:1666)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Registering RDD 38 (distinct at UserVisitSessionAnalyzeSpark.java:1515)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Registering RDD 43 (flatMapToPair at UserVisitSessionAnalyzeSpark.java:1816)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Registering RDD 52 (mapToPair at UserVisitSessionAnalyzeSpark.java:1938)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Registering RDD 46 (flatMapToPair at UserVisitSessionAnalyzeSpark.java:1877)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Registering RDD 57 (mapToPair at UserVisitSessionAnalyzeSpark.java:1966)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Registering RDD 63 (mapToPair at UserVisitSessionAnalyzeSpark.java:1559)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Got job 7 (take at UserVisitSessionAnalyzeSpark.java:1593) with 1 output partitions
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Final stage: ResultStage 40(take at UserVisitSessionAnalyzeSpark.java:1593)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Parents of final stage: List(ShuffleMapStage 39)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Missing parents: List(ShuffleMapStage 39)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Submitting ShuffleMapStage 37 (MapPartitionsRDD[46] at flatMapToPair at UserVisitSessionAnalyzeSpark.java:1877), which has no missing parents
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - ensureFreeSpace(4160) called with curMem=11444244, maxMem=849110630
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Block broadcast_17 stored as values in memory (estimated size 4.1 KB, free 798.9 MB)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - ensureFreeSpace(2025) called with curMem=11448404, maxMem=849110630
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Block broadcast_17_piece0 stored as bytes in memory (estimated size 2025.0 B, free 798.9 MB)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Added broadcast_17_piece0 in memory on localhost:51878 (size: 2025.0 B, free: 798.9 MB)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Created broadcast 17 from broadcast at DAGScheduler.scala:861
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Submitting 1 missing tasks from ShuffleMapStage 37 (MapPartitionsRDD[46] at flatMapToPair at UserVisitSessionAnalyzeSpark.java:1877)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Adding task set 37.0 with 1 tasks
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Submitting ShuffleMapStage 30 (MapPartitionsRDD[43] at flatMapToPair at UserVisitSessionAnalyzeSpark.java:1816), which has no missing parents
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - ensureFreeSpace(4160) called with curMem=11450429, maxMem=849110630
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Block broadcast_18 stored as values in memory (estimated size 4.1 KB, free 798.9 MB)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Starting task 0.0 in stage 37.0 (TID 16, localhost, PROCESS_LOCAL, 1963 bytes)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Running task 0.0 in stage 37.0 (TID 16)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - ensureFreeSpace(2016) called with curMem=11454589, maxMem=849110630
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Block broadcast_18_piece0 stored as bytes in memory (estimated size 2016.0 B, free 798.8 MB)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Added broadcast_18_piece0 in memory on localhost:51878 (size: 2016.0 B, free: 798.9 MB)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Created broadcast 18 from broadcast at DAGScheduler.scala:861
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Found block rdd_25_0 locally
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Submitting 1 missing tasks from ShuffleMapStage 30 (MapPartitionsRDD[43] at flatMapToPair at UserVisitSessionAnalyzeSpark.java:1816)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Adding task set 30.0 with 1 tasks
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Submitting ShuffleMapStage 28 (MapPartitionsRDD[40] at mapToPair at UserVisitSessionAnalyzeSpark.java:1666), which has no missing parents
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - ensureFreeSpace(3944) called with curMem=11456605, maxMem=849110630
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Block broadcast_19 stored as values in memory (estimated size 3.9 KB, free 798.8 MB)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - ensureFreeSpace(1958) called with curMem=11460549, maxMem=849110630
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Block broadcast_19_piece0 stored as bytes in memory (estimated size 1958.0 B, free 798.8 MB)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Added broadcast_19_piece0 in memory on localhost:51878 (size: 1958.0 B, free: 798.9 MB)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Created broadcast 19 from broadcast at DAGScheduler.scala:861
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Submitting 1 missing tasks from ShuffleMapStage 28 (MapPartitionsRDD[40] at mapToPair at UserVisitSessionAnalyzeSpark.java:1666)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Adding task set 28.0 with 1 tasks
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Submitting ShuffleMapStage 27 (MapPartitionsRDD[36] at distinct at UserVisitSessionAnalyzeSpark.java:1515), which has no missing parents
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - ensureFreeSpace(3800) called with curMem=11462507, maxMem=849110630
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Block broadcast_20 stored as values in memory (estimated size 3.7 KB, free 798.8 MB)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 37.0 (TID 16). 2182 bytes result sent to driver
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Starting task 0.0 in stage 28.0 (TID 17, localhost, PROCESS_LOCAL, 1963 bytes)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Running task 0.0 in stage 28.0 (TID 17)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - ensureFreeSpace(1919) called with curMem=11466307, maxMem=849110630
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Block broadcast_20_piece0 stored as bytes in memory (estimated size 1919.0 B, free 798.8 MB)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Found block rdd_25_0 locally
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 37.0 (TID 16) in 17 ms on localhost (1/1)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Removed TaskSet 37.0, whose tasks have all completed, from pool 
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Added broadcast_20_piece0 in memory on localhost:51878 (size: 1919.0 B, free: 798.9 MB)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Created broadcast 20 from broadcast at DAGScheduler.scala:861
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Submitting 1 missing tasks from ShuffleMapStage 27 (MapPartitionsRDD[36] at distinct at UserVisitSessionAnalyzeSpark.java:1515)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Adding task set 27.0 with 1 tasks
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - ShuffleMapStage 37 (flatMapToPair at UserVisitSessionAnalyzeSpark.java:1877) finished in 0.022 s
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - looking for newly runnable stages
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - running: Set(ShuffleMapStage 30, ShuffleMapStage 27, ShuffleMapStage 28)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - waiting: Set(ShuffleMapStage 31, ShuffleMapStage 38, ShuffleMapStage 39, ResultStage 40, ShuffleMapStage 29)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - failed: Set()
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Missing parents for ShuffleMapStage 31: List(ShuffleMapStage 28, ShuffleMapStage 29)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Missing parents for ShuffleMapStage 38: List(ShuffleMapStage 30, ShuffleMapStage 31)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Missing parents for ShuffleMapStage 39: List(ShuffleMapStage 38)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Missing parents for ResultStage 40: List(ShuffleMapStage 39)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Missing parents for ShuffleMapStage 29: List(ShuffleMapStage 27)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 28.0 (TID 17). 2182 bytes result sent to driver
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Starting task 0.0 in stage 27.0 (TID 18, localhost, PROCESS_LOCAL, 1963 bytes)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Running task 0.0 in stage 27.0 (TID 18)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Finished task 0.0 in stage 28.0 (TID 17) in 13 ms on localhost (1/1)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Found block rdd_25_0 locally
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Removed TaskSet 28.0, whose tasks have all completed, from pool 
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - ShuffleMapStage 28 (mapToPair at UserVisitSessionAnalyzeSpark.java:1666) finished in 0.016 s
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - looking for newly runnable stages
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - running: Set(ShuffleMapStage 30, ShuffleMapStage 27)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - waiting: Set(ShuffleMapStage 31, ShuffleMapStage 38, ShuffleMapStage 39, ResultStage 40, ShuffleMapStage 29)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - failed: Set()
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Missing parents for ShuffleMapStage 31: List(ShuffleMapStage 29)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Missing parents for ShuffleMapStage 38: List(ShuffleMapStage 30, ShuffleMapStage 31)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Missing parents for ShuffleMapStage 39: List(ShuffleMapStage 38)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Missing parents for ResultStage 40: List(ShuffleMapStage 39)
+2018-11-13 14:32:08 INFO logInfo(Logging.scala:59) - Missing parents for ShuffleMapStage 29: List(ShuffleMapStage 27)
+2018-11-13 14:34:32 WARN logWarning(Logging.scala:71) - Removing executor driver with no recent heartbeats: 155557 ms exceeds timeout 120000 ms
+2018-11-13 14:34:32 ERROR logError(Logging.scala:75) - Lost executor driver on localhost: Executor heartbeat timed out after 155557 ms
+2018-11-13 14:34:34 INFO logInfo(Logging.scala:59) - Re-queueing tasks for driver from TaskSet 30.0
+2018-11-13 14:34:44 INFO logInfo(Logging.scala:59) - Re-queueing tasks for driver from TaskSet 27.0
+2018-11-13 14:34:45 WARN logWarning(Logging.scala:71) - Lost task 0.0 in stage 27.0 (TID 18, localhost): ExecutorLostFailure (executor driver lost)
+2018-11-13 14:34:46 ERROR logError(Logging.scala:75) - Task 0 in stage 27.0 failed 1 times; aborting job
+2018-11-13 14:34:46 INFO logInfo(Logging.scala:59) - Removed TaskSet 27.0, whose tasks have all completed, from pool 
+2018-11-13 14:34:46 INFO logInfo(Logging.scala:59) - Cancelling stage 30
+2018-11-13 14:34:46 INFO logInfo(Logging.scala:59) - Told to re-register on heartbeat
+2018-11-13 14:34:46 WARN logWarning(Logging.scala:71) - Killing executors is only supported in coarse-grained mode
+2018-11-13 14:34:47 INFO logInfo(Logging.scala:59) - BlockManager re-registering with master
+2018-11-13 14:34:47 INFO logInfo(Logging.scala:59) - Trying to register BlockManager
+2018-11-13 14:34:48 INFO logInfo(Logging.scala:59) - Registered BlockManager
+2018-11-13 14:34:49 INFO logInfo(Logging.scala:59) - Removed TaskSet 30.0, whose tasks have all completed, from pool 
+2018-11-13 14:34:49 INFO logInfo(Logging.scala:59) - Stage 30 was cancelled
+2018-11-13 14:34:49 INFO logInfo(Logging.scala:59) - ShuffleMapStage 30 (flatMapToPair at UserVisitSessionAnalyzeSpark.java:1816) failed in 160.149 s
+2018-11-13 14:34:49 INFO logInfo(Logging.scala:59) - Cancelling stage 27
+2018-11-13 14:34:49 INFO logInfo(Logging.scala:59) - ShuffleMapStage 27 (distinct at UserVisitSessionAnalyzeSpark.java:1515) failed in 160.136 s
+2018-11-13 14:34:49 INFO logInfo(Logging.scala:59) - Reporting 17 blocks to the master.
+2018-11-13 14:34:49 INFO logInfo(Logging.scala:59) - Job 7 failed: take at UserVisitSessionAnalyzeSpark.java:1593, took 160.206091 s
+2018-11-13 14:34:49 INFO logInfo(Logging.scala:59) - Added broadcast_20_piece0 in memory on localhost:51878 (size: 1919.0 B, free: 798.9 MB)
+2018-11-13 14:34:49 INFO logInfo(Logging.scala:59) - Executor lost: driver (epoch 11)
+2018-11-13 14:34:49 INFO logInfo(Logging.scala:59) - Added broadcast_10_piece0 in memory on localhost:51878 (size: 389.0 B, free: 798.9 MB)
+2018-11-13 14:34:49 INFO logInfo(Logging.scala:59) - Trying to remove executor driver from BlockManagerMaster.
+2018-11-13 14:34:49 INFO logInfo(Logging.scala:59) - Invoking stop() from shutdown hook
+2018-11-13 14:34:49 INFO logInfo(Logging.scala:59) - Removing block manager BlockManagerId(driver, localhost, 51878)
+2018-11-13 14:34:49 INFO logInfo(Logging.scala:59) - Removed driver successfully in removeExecutor
+2018-11-13 14:35:04 ERROR logError(Logging.scala:75) - Failed to report rdd_25_0 to master; giving up.
+2018-11-13 14:35:04 INFO logInfo(Logging.scala:59) - Host added was in lost list earlier: localhost
+2018-11-13 14:35:09 INFO logInfo(Logging.scala:59) - Told to re-register on heartbeat
+2018-11-13 14:35:09 INFO logInfo(Logging.scala:59) - BlockManager re-registering with master
+2018-11-13 14:35:09 INFO logInfo(Logging.scala:59) - Trying to register BlockManager
+2018-11-13 14:35:09 INFO logInfo(Logging.scala:59) - Registering block manager localhost:51878 with 809.8 MB RAM, BlockManagerId(driver, localhost, 51878)
+2018-11-13 14:35:09 INFO logInfo(Logging.scala:59) - Registered BlockManager
+2018-11-13 14:35:09 INFO logInfo(Logging.scala:59) - Reporting 17 blocks to the master.
+2018-11-13 14:35:09 INFO logInfo(Logging.scala:59) - Added broadcast_20_piece0 in memory on localhost:51878 (size: 1919.0 B, free: 809.8 MB)
+2018-11-13 14:35:09 INFO logInfo(Logging.scala:59) - Added broadcast_10_piece0 in memory on localhost:51878 (size: 389.0 B, free: 809.8 MB)
+2018-11-13 14:35:09 INFO logInfo(Logging.scala:59) - Added rdd_25_0 in memory on localhost:51878 (size: 4.6 MB, free: 805.1 MB)
+2018-11-13 14:35:09 INFO logInfo(Logging.scala:59) - Added broadcast_18_piece0 in memory on localhost:51878 (size: 2016.0 B, free: 805.1 MB)
+2018-11-13 14:35:09 INFO doStop(ContextHandler.java:843) - stopped o.s.j.s.ServletContextHandler{/static/sql,null}
+2018-11-13 14:35:09 INFO logInfo(Logging.scala:59) - Added broadcast_16_piece0 in memory on localhost:51878 (size: 1681.0 B, free: 805.1 MB)
